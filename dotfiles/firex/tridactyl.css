@@ -1,0 +1,11 @@
+:root:not([customizing])
+  #navigator-toolbox:not(:hover):not(:focus-within)
+  #urlbar {
+  min-height: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+:root:not([customizing]) #navigator-toolbox #urlbar-container {
+  --urlbar-container-height: auto !important;
+}

@@ -1,0 +1,68 @@
+unbind <C-f>
+
+bind ;R sanitise tridactyllocal
+
+
+bind u undo tab
+bind U undo window
+
+bind <M-g> tabprev
+bind <M-h> tabnext
+
+"Hints Settings"
+
+"Hint save as"
+bind J hint -a
+"Hint save direct recurse"
+bind j hint -s
+"Hint attribute <a>"
+bind e hint -J a 
+"Hint images and download"
+bind E hint -S
+"Hint open"
+bind f hint -J 
+"Hint open new tab"
+bind F hint -tJ 
+"Hint url main to clipboard"
+bind Y clipboard yank
+"Hint text to clipboard"
+bind y hint -P
+"Hint url"
+bind k hint -#
+bind K hint -F e => tri.excmds.fillcmdline("hint -Jc " + tri.dom.getSelector(e))
+"Hint open new window"
+bind h hint -Jw
+bind H hint -Jwp
+
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+
+"Remove search highlighting"
+bind l nohlsearch
+
+bind i hint -Jc input 
+bind I fillcmdline hint -Jc
+
+bind <C-k> tabprev
+bind <C-j> tabnext
+
+set theme midnight
+set smoothscroll true
+set allowautofocus true
+set hintchars aoeuidrtns,.ch
+set hintautoselect true
+set visualenterauto false
+
+"Search settings.
+set searchengine b
+set searchurls.b https://www.bing.com/search?q=%s
+
+
+setpref alerts.useSystemBackend true
+set newtab https://www.bing.com/
+
+set hintstyles.bg none
+set hintstyles.fg none
+set hintstyles.outline none
