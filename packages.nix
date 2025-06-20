@@ -5,6 +5,7 @@
     authenticator
     calibre
     calcure
+    proton-pass
 
     # Only Internet
     qbittorrent

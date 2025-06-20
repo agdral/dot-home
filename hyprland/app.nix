@@ -70,10 +70,6 @@
       "$ModS, N, movewindoworgroup, r"
       "$ModS, C, movewindoworgroup, u"
       "$ModS, T, movewindoworgroup, d"
-
-      # Media
-      "$HyprLS, 7, exec, playerConf mute"
-      "$HyprLS, 8, exec, playerConf mute_mic"
     ];
 
     # Move/resize windows with Mod + LMB/RMB and dragging

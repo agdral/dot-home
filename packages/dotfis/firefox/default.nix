@@ -16,9 +16,6 @@
     };
   };
   imports = [
-    ./argonarch.nix
-    ./secundary.nix
+    ./profiles.nix
   ];
 }
-# SearchEngines
-# ExtensionSettings
