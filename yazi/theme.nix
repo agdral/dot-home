@@ -19,7 +19,7 @@
         }
       ];
     };
-    manager = {
+    mgr = {
       cwd = {fg = "#94e2d5";};
 
       # Hovered

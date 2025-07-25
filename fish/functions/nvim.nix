@@ -8,10 +8,6 @@
       neovide --wayland_app_id=Code $argv >/dev/null 2>&1 &
       disown
     '';
-    nn = ''
-      neovide --wayland_app_id=noto $argv >/dev/null 2>&1 &
-      disown
-    '';
 
     n = ''
       nv .
@@ -20,7 +16,7 @@
       nc .
     '';
     c = ''
-      code .
+      codellm .
     '';
     zn = ''
       set result (zoxide query $argv)

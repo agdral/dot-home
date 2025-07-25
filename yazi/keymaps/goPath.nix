@@ -1,5 +1,5 @@
 {...}: {
-  programs.yazi.keymap.manager.prepend_keymap = [
+  programs.yazi.keymap.mgr.prepend_keymap = [
     # Path Shortcuts
     {
       on = ["g" "p"];

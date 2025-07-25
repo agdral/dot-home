@@ -7,18 +7,27 @@
       atuin init fish | source
       bind up _atuin_bind_up
 
-      set path_docker "$HOME/Apps/Docker"
+      set path_docker "/hdd/kael/Documentos/Docker"
       set path_nixos "/etc/nixos"
       set path_config "$HOME/.config"
+      set path_proy "/hdd/falcon/Proyectos"
       set path_home "$HOME/.config/home-manager"
-      set note_home "/hdd/kael/Notes/Home"
-      set note_work "/hdd/kael/Notes/Work"
     '';
   };
 
   imports = [
-    ./functions
     ./function.nix
-    ./aliases
+
+    ./aliases/nixos.nix
+    ./aliases/nushell.nix
+    ./aliases/short.nix
+
+    ./functions/develop.nix
+    ./functions/docker.nix
+    ./functions/nvim.nix
+
+    ./goTo/home.nix
+    ./goTo/nixos.nix
+    ./goTo/packs.nix
   ];
 }

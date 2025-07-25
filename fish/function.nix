@@ -17,5 +17,19 @@
           nv -- -c "cd $argv[1]" -c "edit $argv[2]"
       end
     '';
+
+    handle_dir = ''
+      if test "$argv[1]" = c
+          cd "$argv[2]"
+          nc -- -c "cd $argv[2]" 
+      else if test "$argv[1]" = n
+          cd "$argv[2]"
+          nvim -c "cd $argv[2]" 
+      else
+          cd "$argv[1]"
+          nv -- -c "cd $argv[1]"
+      end
+    '';
+
   };
 }

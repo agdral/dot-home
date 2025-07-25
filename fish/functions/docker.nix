@@ -6,12 +6,13 @@
     d-noco = ''
       docker-if nocodb-nocodb-1 $path_docker/NocoDB/docker-compose.yml http://localhost:8080/dashboard/#/
     '';
-    d-inven = ''
-      docker-if inventree-server $path_docker/Inventree/docker-compose.yml http://192.168.0.50:80/
+    d-erp = ''
+      docker-if frappe_docker-frontend-1 $path_docker/frappe_docker/pwd.yml http://192.168.0.50:80/
     '';
     d-port = ''
       docker-if portainer $path_docker/Portainer/docker-compose.yml http://192.168.0.50:9005/
     '';
+
     docker-if = ''
       set i_service (docker inspect --format '{{.State.Running}}' $argv[1])
       if test "$i_service" = true
@@ -21,6 +22,9 @@
           firefox -p argonarch $argv[3]
       end
     '';
+
     docks = "docker ps -a --format 'table {{.ID}}\\t{{.Names}}\\t{{.Ports}}'";
+    dc = "docker compose $argv";
+    dv = "docker volume $argv";
   };
 }

@@ -1,9 +1,6 @@
 {config, ...}: let
   style_css = [
-    "${config.home.sessionVariables.path_dotfiles}/firex/userChrome.css"
     "${config.home.sessionVariables.path_dotfiles}/firex/autohide_navigation_button.css"
-    "${config.home.sessionVariables.path_dotfiles}/firex/autohide_toolbox.css"
-    "${config.home.sessionVariables.path_dotfiles}/firex/sideberyMods.css"
     "${config.home.sessionVariables.path_dotfiles}/firex/tridactyl.css"
   ];
   contenidos = builtins.map builtins.readFile style_css;
@@ -25,26 +22,35 @@
     "sidebar.visibility" = "expand-on-hover";
   };
 in {
-  programs.firefox.profiles = {
-    argonarch = {
-      isDefault = true;
-      id = 0;
-      settings = settings_default;
-      userChrome = styles;
+  programs.firefox = {
+    enable = true;
+    languagePacks = [
+      "es-ES"
+    ];
+    policies = {
+      DisableAppUpdate = true;
+      DisableFirefoxStudies = true;
+      DisablePocket = true;
+      DisableMasterPasswordCreation = true;
+      DisableProfileImport = true;
+      DisableTelemetry = true;
+      DisplayBookmarksToolbar = "never";
+      ShowHomeButton = false;
     };
+    profiles = {
+      argonarch = {
+        isDefault = true;
+        id = 0;
+        settings = settings_default;
+        userChrome = styles;
+      };
 
-    secundary = {
-      isDefault = false;
-      id = 1;
-      settings = settings_default;
-      userChrome = styles;
-    };
-
-    googler = {
-      isDefault = false;
-      id = 2;
-      settings = settings_default;
-      userChrome = styles;
+      secundary = {
+        isDefault = false;
+        id = 1;
+        settings = settings_default;
+        userChrome = styles;
+      };
     };
   };
 }

@@ -10,6 +10,7 @@
         kb_variant = "altgr-intl";
         numlock_by_default = true;
         follow_mouse = 1;
+        sensitivity = 0.3;
         scroll_factor = 2.0;
         tablet = {
           absolute_region_position = true;
@@ -48,7 +49,12 @@
         "col.border_inactive" = "rgba(595959aa)";
         groupbar = {
           render_titles = false;
-          height = 2;
+          rounding = 4;
+          gradient_rounding = 4;
+          round_only_edges = false;
+          gaps_out = 4;
+          gaps_in = 5;
+          height = 4;
           "col.active" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
           "col.inactive" = "rgba(595959aa)";
         };

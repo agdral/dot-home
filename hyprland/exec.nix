@@ -7,10 +7,15 @@
 
     "$ModS" = "SUPER SHIFT";
 
+    "$F23" = "XF86TouchpadOff";
+    "$F22" = "XF86TouchpadOn";
+    "$F21" = "XF86TouchpadToggle";
+    "$F20" = "XF86AudioMicMute";
+
     exec-once = [
       # Firefox
       "[workspace 1 silent] firefox -p argonarch"
-      "imageShuffle ~/Apps/wallpaper"
+      "imageShuffle /hdd/kael/Graficos/Wallpaper"
     ];
   };
 }

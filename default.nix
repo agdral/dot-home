@@ -3,6 +3,11 @@
     ./interfaces.nix
     ./packages.nix
 
+    # individual
+    ./hyprland
+    ./fish
+    ./yazi
+
     # Services
     ./packages/service/espanso.nix
     ./packages/service/hyprPolkit.nix
@@ -10,17 +15,13 @@
     ./packages/service/swww.nix
     ./packages/service/syncthing.nix
 
-    # Hyprland
-    ./hyprland
-
     # Gui
     ./packages/gui/foot.nix
     ./packages/gui/kitty.nix
     ./packages/gui/neovide.nix
+    ./packages/gui/proton.nix
 
     # Cli
-    ./packages/cli/fish
-    ./packages/cli/taskwarrior.nix
     ./packages/cli/atuin.nix
     ./packages/cli/zsh.nix
     ./packages/cli/btop.nix
@@ -31,8 +32,7 @@
     ./packages/dotfis/walker.nix
     ./packages/dotfis/waybar.nix
     ./packages/dotfis/swaync.nix
-    ./packages/dotfis/firefox
-    ./packages/dotfis/yazi
+    ./packages/dotfis/firefox.nix
     ./packages/dotfis/tridactyl.nix
   ];
 }

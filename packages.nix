@@ -2,22 +2,12 @@
   home.packages = with pkgs; [
     # Gui & Tui
     qalculate-gtk
-    authenticator
-    calibre
-    calcure
-    proton-pass
 
     # Only Internet
     qbittorrent
     localsend
     thunderbird
     tidal-hifi
-
-    # Hypr
-    hyprshot
-    grimblast
-    hyprpicker
-    hyprland-qtutils
 
     # Vnc
     wayvnc
@@ -30,7 +20,7 @@
     nicotine-plus
     pavucontrol
     pamixer
-    tauon
+    (import <nixpkgs-stable> {}).tauon
     selectdefaultapplication
   ];
 

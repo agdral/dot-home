@@ -1,20 +1,28 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    hyprshot
+    grimblast
+    hyprpicker
+    hyprland-qtutils
+  ];
   wayland.windowManager.hyprland.settings = {
     bind = [
       # Walker
-      ", XF86TouchpadToggle, exec, walker --modules applications"
-      ", XF86TouchpadOn, exec, walker --modules clipboard"
+      ", $F23, exec, walker --modules applications"
+      ", $F22, exec, walker --modules clipboard"
+      ", $F20, exec, pkill -SIGUSR1 waybar"
+
+      "$HyprRm, $F23, exec, systemctl restart --user walker.service"
 
       # Apps
       "$HyprRm, R, exec, firefox -p argonarch"
       "$HyprOm, R, exec, firefox --private-window"
 
-      "$HyprRm, N, exec, localsend_app "
+      "$HyprRm, N, exec, localsend_app"
 
       # Command
       "$HyprRm, P, exec, grimblast save area"
       "$HyprOm, P, exec, grimblast copy area"
-      "$HyprRm, W, exec, waybar"
 
       # Media Command
       ",XF86AudioRaiseVolume, exec, playerConf up"
@@ -55,11 +63,8 @@
       # Modify Window
       "$Modm, D, killactive, "
       "$Modm, S, togglefloating, "
-      "$Modm, Z, togglegroup,"
+      "$Modm, V, togglegroup,"
       "$HyprOm, B, exit"
-
-      # Hide Waybar
-      "$Modm, W, exec, pkill -SIGUSR1 waybar"
 
       # Zoom
       "$Modm, M, exec, pypr zoom ++0.8"

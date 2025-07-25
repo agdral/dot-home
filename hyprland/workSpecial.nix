@@ -1,19 +1,11 @@
 {...}: let
   pagesWebs = [
     "https://web.whatsapp.com"
-    "https://chatgpt.com"
-    "https://gemini.google.com"
-  ];
-
-  pagesGoogle = [
+    "https://apps.abacus.ai/chatllm/"
     "https://drive.google.com/drive/u/0/home"
-    "https://keep.google.com/u/0/"
-    "https://calendar.google.com/calendar/u/0/"
-    "https://tasks.google.com/tasks/"
   ];
 
   firefoxPages = builtins.concatStringsSep " " pagesWebs;
-  firefoxGoogle = builtins.concatStringsSep " " pagesGoogle;
 
   special = [
     # First Line
@@ -56,13 +48,6 @@
 
     # Second Line
     {
-      key = "Delete";
-      name = "noto";
-      class = "noto";
-      app = ''neovide --fork --wayland_app_id=noto "/hdd/kael/Notes/Home/index.norg" -- -c "cd /hdd/kael/Notes/Home" '';
-      group = true;
-    }
-    {
       key = "Q";
       name = "task";
       app = "proton-pass";
@@ -70,8 +55,8 @@
     }
     {
       key = "J";
-      name = "code";
-      class = "Code";
+      name = "abacus";
+      class = "CodeLLM";
       silent = false;
       group = true;
     }
@@ -84,9 +69,9 @@
     }
     {
       key = "K";
-      name = "googler";
-      app = "firefox -p googler --name googler ${firefoxGoogle}";
-      class = "googler";
+      name = "noto";
+      class = "obsidian";
+      app = ''obsidian'';
     }
     {
       key = "bracketleft";

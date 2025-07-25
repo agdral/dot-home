@@ -1,5 +1,10 @@
-{config, pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
+    unzip
     ripgrep
     poppler
     ffmpegthumbnailer
@@ -13,6 +18,7 @@
     glow
     transmission_4
     epub-thumbnailer
+    p7zip
   ];
   programs.yazi = {
     enable = true;

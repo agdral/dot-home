@@ -10,7 +10,6 @@
     gu = "gitui";
     gits = "gita super status --short";
     suf = "su -c fish";
-    move-des = "moveDown";
     wake-arch = "wakeonlan 30:9c:23:41:20:20";
     wake-argon = "wakeonlan fc:aa:14:5b:8d:81";
     ssh-arch = "ssh -t argonarch@192.168.0.50 fish";

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mulac-r",
+  "private_key_id": "20dc49c00f90911bea25cb0a65aa23960493cc11",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDL/pme0yQSnZUh\ng/yTNNAjFOdbN1SCq2UGPeAEH/zMZ/3IsDG1SU4xl63Nkh3qUv2ZFgXB0r9mnlRf\nCNnM8V+tmiRUxaI4D1sPbsVGQcLHp8JR7pI8g15pBeboeVRA3EqnQ65UrU8a3LKO\nTP0+Bz8IpjJF6AqCo8X8Y9fjDPQmtDASQaRbDdqKNR3kv2yZcIQLbp2K/1xaJFrp\niCKP0PyD1+IXqOvUacL3VBI4KdNnCN0XO04Zwc6P1haWuEOqP6vu3lMmiagkrIzJ\nDjFhUuDuDUXCflTcIyokpwMmiJvQ0SHmOoRqs4Qu8l9g4E/kneF5EQ8BGwKmWto+\nS6994IiLAgMBAAECggEABp2NwyYlwqoe7qSmdD+qNaO1PQgLqDvWst/JfANtjKjI\nBNIcn+cYr2hego7ShDQyH9zO+FIqqDFKRdVg+tHOazAsgsibUiYYAJAfEFWMSN1F\nN/2nUGm842WwRKm/9GUwe+wooyZbrQtV3wzayZWCkyKQpCO6SNz2zBCQ177RIXrM\n56U6gj1rcfcdy4/3lZD+REPNe6ASZ9z2ORNI9AQa6n7LrNJBywSdMddB8DFyWpV5\nHR8T0XcImqeK2ieX/foxz7xM03N0krGJpzsx7LygUEXyKe+6V3YU8PJ705IBAYLZ\niZ65Ve1T4lrw7CoxH4nWtOQArzhlgoX8NT4a4j+twQKBgQD6K5TNZFWuyPwqiX2b\nltQlJBKFBXFTvMn6FzIi57gF4O3wrts9xxIy2egU+z0vTM9VQ3MVRM4eQHCuo4ev\nzuquLlNy2qrKMHUapzlzWLgOCCIezjjWdjbcRZ2DoS22jUZqY+cZleOZqH1OqtLL\nUYGhDa1NpveyB/ccbx1gafTb7QKBgQDQv41sY0uPuTR7i7USMMtygZwgTKzJBiRT\nPwrp5h+EIowM6yPt+pU1ZnD+lsZunkK4qLe6NkErxUKx8Zw+Y0JjBS+/PgZfTRi6\nobqV5Cl5A1uZ9aZNrDdByE0Eu+Zjt1p9eZ8vz9V6yMRURZPJbNn5Q+Baf+jtqD9G\n5WL4oZWXVwKBgAVwhybEJLzNL/Z40NteNzSriR+NU75/X2DpujRaF31BO8s88hVw\ny6uBY3N5VwY9RFDVS55NxbGQsyKI+b1P4XhyF2xq5sXIsfMnaa9hYXckpCFJWKEJ\nJv45IUioa4cJoVtU2sSKps1DhZ39RuIW3puy4W7Lz5z2YWAj5l6fTyytAoGAQwnx\naiitYJfTAgZI/XGMNNbpA/p71wdQ7Scm4x0TbAUIQzHU1R2Pg5nFmg1j5qyOsu0E\nLBo2bc8o7yqvyd1ouZI11k4eD8cbtPwxhufCZemtJlGcuf8fs9GW4nlRsR52Qiun\n8tvlLEyDuKiroJmDmyiwSYAglwpcX/FVCpIiD3sCgYEA7LHc4i4f6uikOEB9lcPS\niw8etBZFe3Zy6KwHjmN68jQrcQcw8Of91R7JwwL3HlkP81LomdvEK16hec7FDB1b\ndHp0yxegFTnH02MTbm1aXMFVumExeBViwcIS331ZlwFq7qHhAJhn3qLEqg7cxe/o\nYeto21f4ugOVqE17ErY+ZNc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-tasks-api@mulac-r.iam.gserviceaccount.com",
+  "client_id": "110485355742526127482",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-tasks-api%40mulac-r.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
