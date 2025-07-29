@@ -2,9 +2,9 @@
 
 function moveFiles {
 find "$1" \( -iname "*.pdf" \) -exec mv {} "$XDG_DOCUMENTS_DIR/PDFs" \;
-find "$1" \( -iname "*.xlsx" -o -iname "*.ods" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Excel" \;
-find "$1" \( -iname "*.pptx" -o -iname "*.odg" -o -iname "*.odp" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Diapositivas" \;
-find "$1" \( -iname "*.docx" -o -iname "*.odt" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Documentos" \;
+find "$1" \( -iname "*.xlsx" -o -iname "*.ods" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Sheets" \;
+find "$1" \( -iname "*.pptx" -o -iname "*.odg" -o -iname "*.odp" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Slides" \;
+find "$1" \( -iname "*.docx" -o -iname "*.odt" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Docs" \;
 find "$1" \( -iname "*.epub" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Books/Nuevos" \;
 find "$1" \( -iname "*.csv" \) -exec mv {} "$XDG_DOCUMENTS_DIR/Datasets" \;
 

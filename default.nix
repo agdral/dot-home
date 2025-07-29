@@ -2,37 +2,26 @@
   imports = [
     ./interfaces.nix
     ./packages.nix
-
-    # individual
     ./hyprland
-    ./fish
-    ./yazi
-
-    # Services
-    ./packages/service/espanso.nix
-    ./packages/service/hyprPolkit.nix
-    ./packages/service/pyprland.nix
-    ./packages/service/swww.nix
-    ./packages/service/syncthing.nix
-
-    # Gui
-    ./packages/gui/foot.nix
-    ./packages/gui/kitty.nix
-    ./packages/gui/neovide.nix
-    ./packages/gui/proton.nix
+    ./shell
 
     # Cli
-    ./packages/cli/atuin.nix
-    ./packages/cli/zsh.nix
     ./packages/cli/btop.nix
     ./packages/cli/git.nix
     ./packages/cli/gitui.nix
+    ./packages/cli/tridactyl
 
-    # Dotfis
-    ./packages/dotfis/walker.nix
-    ./packages/dotfis/waybar.nix
-    ./packages/dotfis/swaync.nix
-    ./packages/dotfis/firefox.nix
-    ./packages/dotfis/tridactyl.nix
+    # Gui
+    ./packages/gui_tui/neovide.nix
+    ./packages/gui_tui/proton.nix
+    ./packages/gui_tui/walker
+    ./packages/gui_tui/waybar
+    ./packages/gui_tui/firefox
+    ./packages/gui_tui/swaync
+
+    # Services
+    ./packages/service/espanso.nix
+    ./packages/service/swww.nix
+    ./packages/service/syncthing.nix
   ];
 }

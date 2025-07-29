@@ -2,6 +2,9 @@
   home.packages = with pkgs; [
     # Gui & Tui
     qalculate-gtk
+    obsidian
+    imv
+    asciinema
 
     # Only Internet
     qbittorrent
@@ -20,30 +23,19 @@
     nicotine-plus
     pavucontrol
     pamixer
-    (import <nixpkgs-stable> {}).tauon
-    selectdefaultapplication
+    tauon
   ];
 
   programs = {
-    home-manager.enable = true;
     mpv.enable = true;
     ripgrep.enable = true;
-    starship.enable = true;
     zathura.enable = true;
-    zoxide.enable = true;
-    nix-index.enable = true;
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
   };
 
   services = {
     copyq = {
       enable = true;
-      # package = (import <nixpkgs-stable> {}).copyq;
     };
     gnome-keyring.enable = true;
-    ssh-agent.enable = true;
   };
 }

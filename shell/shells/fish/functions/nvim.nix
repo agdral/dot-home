@@ -1,0 +1,26 @@
+{...}: {
+  programs.fish.functions = {
+    nv = ''
+      neovide --wayland_app_id=neovide $argv >/dev/null 2>&1 &
+      disown
+    '';
+    nc = ''
+      neovide --wayland_app_id=CodeLLM $argv >/dev/null 2>&1 &
+      disown
+    '';
+    n = "nv .";
+    v = "nc .";
+    c = "codellm .";
+    zn = ''
+      set result (zoxide query $argv)
+      cd $result
+      n
+    '';
+    zc = ''
+      set result (zoxide query $argv)
+      cd $result
+      v
+    '';
+    nt = "nc $(mktemp /tmp/temp-XXXXXX)";
+  };
+}

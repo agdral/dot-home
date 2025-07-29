@@ -14,8 +14,14 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
-    path_dotfiles = "${config.home.homeDirectory}/.config/home-manager/Home-Default/dotfiles";
-    path_scripts =  "${config.home.homeDirectory}/.config/home-manager/Home-Default/scripts";
+    dirDotfiles = "${config.home.homeDirectory}/.config/home-manager/Home-Default/dotfiles";
+    dirScripts =  "${config.home.homeDirectory}/.config/home-manager/Home-Default/scripts";
+    dirSheets = "/hdd/kael/Documentos/Sheets";
+    dirDocs = "/hdd/kael/Documentos/Docs";
+    dirSlides = "/hdd/kael/Documentos/Slides";
+    dirDatasets = "/hdd/kael/Documentos/Datasets";
+    dirBooks = "/hdd/kael/Documentos/Books";
+    dirImages = "/hdd/kael/Graficos/Images";
   };
 
   dconf.settings = {
