@@ -46,19 +46,5 @@
       run = "plugin restore";
       desc = "Restore last deleted files/folders";
     }
-
-    # Mount
-    {
-      on = "M";
-      run = "plugin mount";
-    }
-
-    # Ouch Plugin
-
-    {
-      on = ["C"];
-      run = "plugin ouch zip";
-      desc = "Compress with ouch";
-    }
   ];
 }

@@ -32,5 +32,6 @@
     ./settings.nix
     ./theme.nix
     ./keymaps
+    ./plugins
   ];
 }

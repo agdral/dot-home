@@ -38,35 +38,6 @@
           mime = "audio/*";
           run = "exifaudio";
         }
-        # Archive previewer
-        {
-          mime = "application/zip";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-tar";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-bzip2";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-7z-compressed";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-rar";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-xz";
-          run = "ouch";
-        }
-        {
-          name = "*.md";
-          run = "glow";
-        }
         {
           mime = "application/epub+zip";
           run = "epub-preview";

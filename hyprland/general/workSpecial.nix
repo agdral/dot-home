@@ -18,7 +18,7 @@
     {
       key = "A";
       name = "file";
-      app = "foot -a fileTerm yazi";
+      app = "kitty --class=fileTerm yazi";
       class = "fileTerm";
     }
     {

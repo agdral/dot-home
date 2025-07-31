@@ -1,10 +1,12 @@
 {...}: {
   programs.fish.functions = {
-    sudup = "sudo nixos-rebuild switch --upgrade --impure";
-    suhome = "home-manager switch";
-    suboot = "sudo nixos-rebuild boot --impure";
-    surmg = "sudo nix-collect-garbage -d";
-    hormg = "home-manager expire-generations '-0 days'";
-    sunix = "cd /etc/nixos/ && nix-channel --update && sudo nix flake update --impure";
+    s-nixos = "sudo nixos-rebuild switch --upgrade";
+    s-home = "home-manager switch";
+    s-boot = "sudo nixos-rebuild boot";
+    f-all = "cd /etc/nixos/ && nix-channel --update && sudo nix flake update";
+    f-nixvim = "cd /etc/nixos/ && sudo nix flake lock --update-input nixvim-config";
+    f-nixos = "cd /etc/nixos/ && sudo nix flake lock --update-input dotfile-default";
+    rm-nixos = "sudo nix-collect-garbage -d";
+    rm-home = "home-manager expire-generations '-0 days'";
   };
 }

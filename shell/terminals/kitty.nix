@@ -24,6 +24,6 @@
       "super+g" = "previous_tab";
       "ctrl+shift+t" = "new_tab";
     };
-    themeFile = "Catppuccin-Mocha";
+    themeFile = "rose-pine";
   };
 }
