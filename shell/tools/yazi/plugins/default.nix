@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   programs.yazi.plugins = {
-    restore = pkgs.yaziPlugins.restore;
     full-border = pkgs.yaziPlugins.full-border;
   };
   imports = [
@@ -10,6 +9,7 @@
     ./mount.nix
     ./epub-preview.nix
     ./sudo.nix
+    ./restore.nix
     ./relative-motions.nix
   ];
 }

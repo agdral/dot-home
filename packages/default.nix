@@ -1,4 +1,13 @@
 {pkgs, ...}: {
+  imports = [
+    ./tridactyl
+    ./walker
+    ./waybar
+    ./firefox
+    ./swaync
+    ./neovide
+    ./proton
+  ];
   home.packages = with pkgs; [
     # Gui & Tui
     qalculate-gtk

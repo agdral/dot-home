@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }: {
@@ -15,7 +14,6 @@
     exiftool
     mediainfo
     ouch
-    glow
     transmission_4
     epub-thumbnailer
     p7zip
@@ -31,7 +29,7 @@
   imports = [
     ./settings.nix
     ./theme.nix
-    ./keymaps
+    ./keymaps.nix
     ./plugins
   ];
 }

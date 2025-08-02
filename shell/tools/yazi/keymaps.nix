@@ -1,12 +1,12 @@
 {...}: {
   programs.yazi.keymap.mgr.prepend_keymap = [
     {
-      on = "Z";
+      on = "\"";
       run = "plugin fzf";
       desc = "Jump to a file/directory via fzf";
     }
     {
-      on = "z";
+      on = "'";
       run = "plugin zoxide";
       desc = "Jump to a directory via zoxide";
     }
@@ -38,13 +38,6 @@
     {
       on = ["o"];
       run = "seek -5";
-    }
-
-    # Restore
-    {
-      on = ["u"];
-      run = "plugin restore";
-      desc = "Restore last deleted files/folders";
     }
   ];
 }

@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ...
 }: {
   home.pointerCursor = {
@@ -14,14 +13,6 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
-    dirDotfiles = "${config.home.homeDirectory}/.config/home-manager/Home-Default/dotfiles";
-    dirScripts =  "${config.home.homeDirectory}/.config/home-manager/Home-Default/scripts";
-    dirSheets = "/hdd/kael/Documentos/Sheets";
-    dirDocs = "/hdd/kael/Documentos/Docs";
-    dirSlides = "/hdd/kael/Documentos/Slides";
-    dirDatasets = "/hdd/kael/Documentos/Datasets";
-    dirBooks = "/hdd/kael/Documentos/Books";
-    dirImages = "/hdd/kael/Graficos/Images";
   };
 
   dconf.settings = {
@@ -57,8 +48,4 @@
     };
   };
 
-  nixpkgs.config = {
-    allowBroken = true;
-    allowUnfreePredicate = _: true;
-  };
 }

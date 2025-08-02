@@ -74,7 +74,7 @@
       app = ''obsidian'';
     }
     {
-      key = "bracketleft";
+      key = "minus";
       name = "music";
       app = "tidal-hifi";
       class = "tidal-hifi";
