@@ -9,9 +9,9 @@
 
       set path_docker "/hdd/kael/Documentos/Docker"
       set path_owngit "/hdd/falcon/Proyectos/OwnGithub"
+      set path_dot "/hdd/falcon/Proyectos/Dotfiles"
       set path_nixos "/etc/nixos"
       set path_config "$HOME/.config"
-      set path_proy "/hdd/falcon/Proyectos"
       set path_home "$HOME/.config/home-manager"
     '';
   };
