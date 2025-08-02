@@ -33,18 +33,17 @@
     pavucontrol
     pamixer
     tauon
+
+    # Hyprland
+    hyprshot
+    grimblast
+    hyprpicker
+    hyprland-qtutils
   ];
 
   programs = {
     mpv.enable = true;
     ripgrep.enable = true;
     zathura.enable = true;
-  };
-
-  services = {
-    copyq = {
-      enable = true;
-    };
-    gnome-keyring.enable = true;
   };
 }

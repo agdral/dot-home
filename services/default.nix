@@ -1,7 +1,16 @@
 {...}: {
   imports = [
-    ./espanso.nix
-    ./swww.nix
-    ./syncthing.nix
+    ./espanso
+    ./swww
+    ./syncthing
+    ./hyprPolkit
+    ./pyprland
   ];
+
+  services = {
+    copyq = {
+      enable = true;
+    };
+    gnome-keyring.enable = true;
+  };
 }

@@ -1,14 +1,13 @@
 {pkgs, ...}: {
   imports = [
-    ./shells/fish
-    ./shells/zsh
-    ./terminals/foot.nix
-    ./terminals/kitty.nix
-
-    ./tools/yazi
-    ./tools/atuin.nix
-    ./tools/btop.nix
-    ./tools/gitui.nix
+    ./fish
+    ./zsh
+    ./foot
+    ./kitty
+    ./yazi
+    ./atuin
+    ./btop
+    ./gitui
   ];
   programs = {
     starship.enable = true;
