@@ -37,17 +37,17 @@
     g-docker = ''
       handle_dir $argv[1] $path_docker
     '';
+    g-nixvim = ''
+      handle_dir $argv[1] $path_dot"/Nixvim-Config/" 
+    '';
     g-nixos = ''
       handle_dir $argv[1] $path_nixos
     '';
-    g-dhome = ''
+    gd-home = ''
       handle_dir $argv[1] $path_dot"/Home-Default/"
     '';
-    g-dnixos = ''
+    gd-nixos = ''
       handle_dir $argv[1] $path_dot"/Dotfile-Default/"
-    '';
-    g-nixvim = ''
-      handle_dir $argv[1] $path_dot"/Nixvim-Config/" 
     '';
   };
 }
