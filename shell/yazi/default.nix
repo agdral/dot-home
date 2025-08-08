@@ -7,7 +7,6 @@
     ripgrep
     poppler
     ffmpegthumbnailer
-    fd
     jq
     fzf
     imagemagick
@@ -18,8 +17,10 @@
     epub-thumbnailer
     p7zip
   ];
-  programs.yazi = {
-    enable = true;
+  programs = {
+    fd.enable = true;
+
+    yazi.enable = true;
   };
 
   home.file = {

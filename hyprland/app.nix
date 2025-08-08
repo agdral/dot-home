@@ -8,16 +8,6 @@
 
       "$HyprRm, $F23, exec, systemctl restart --user walker.service"
 
-      # Apps
-      "$HyprRm, R, exec, firefox -p argonarch"
-      "$HyprOm, R, exec, firefox --private-window"
-
-      "$HyprRm, N, exec, localsend_app"
-
-      # Command
-      "$HyprRm, P, exec, grimblast save area"
-      "$HyprOm, P, exec, grimblast copy area"
-
       # Media Command
       ",XF86AudioRaiseVolume, exec, playerConf up"
       ",XF86AudioLowerVolume, exec, playerConf down"
@@ -58,7 +48,6 @@
       "$Modm, D, killactive, "
       "$Modm, S, togglefloating, "
       "$Modm, V, togglegroup,"
-      "$HyprOm, B, exit"
 
       # Zoom
       "$Modm, M, exec, pypr zoom ++0.8"

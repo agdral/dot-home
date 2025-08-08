@@ -12,7 +12,6 @@
     # Gui & Tui
     qalculate-gtk
     obsidian
-    imv
     asciinema
 
     # Only Internet
@@ -45,5 +44,7 @@
     mpv.enable = true;
     ripgrep.enable = true;
     zathura.enable = true;
+    chromium.enable = true;
+    imv.enable = true;
   };
 }

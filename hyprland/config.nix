@@ -71,7 +71,7 @@
       device = [
         {
           name = "redragon-k530-keyboard";
-          kb_layout = "us,ru,de";
+          kb_layout = "us,ru";
           kb_variant = "altgr-intl,,";
         }
         {
