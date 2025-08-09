@@ -18,4 +18,10 @@
       nix-direnv.enable = true;
     };
   };
+
+  home.packages = with pkgs; [
+    asciinema
+    tidal-dl
+    openssl
+  ];
 }

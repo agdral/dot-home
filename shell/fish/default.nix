@@ -19,6 +19,7 @@
     ./aliases/nushell.nix
     ./aliases/short.nix
 
+    ./functions/neovide.nix
     ./functions/develop.nix
     ./functions/docker.nix
     ./functions/nvim.nix
