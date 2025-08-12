@@ -1,7 +1,7 @@
 {...}: let
   pagesWebs = [
     "https://web.whatsapp.com"
-    "https://apps.abacus.ai/chatllm/"
+    "https://chat.deepseek.com"
     "https://drive.google.com/drive/u/0/home"
   ];
 
@@ -55,14 +55,14 @@
     }
     {
       key = "J";
-      name = "abacus";
-      class = "CodeLLM";
+      name = "editorL";
+      class = "Code";
       silent = false;
       group = true;
     }
     {
       key = "X";
-      name = "neovide";
+      name = "editorR";
       class = "neovide";
       silent = false;
       group = true;

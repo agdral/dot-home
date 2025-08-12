@@ -5,12 +5,12 @@
       disown
     '';
     nc = ''
-      neovide --wayland_app_id=CodeLLM $argv >/dev/null 2>&1 &
+      neovide --wayland_app_id=Code $argv >/dev/null 2>&1 &
       disown
     '';
     n = "nv .";
     v = "nc .";
-    c = "codellm .";
+    c = "code .";
     zn = ''
       set result (zoxide query $argv)
       cd $result
