@@ -3,6 +3,7 @@
     "https://web.whatsapp.com"
     "https://chat.deepseek.com"
     "https://drive.google.com/drive/u/0/home"
+    "https://mail.proton.me"
   ];
 
   firefoxPages = builtins.concatStringsSep " " pagesWebs;

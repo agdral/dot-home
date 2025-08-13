@@ -67,19 +67,6 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
       };
-
-      device = [
-        {
-          name = "redragon-k530-keyboard";
-          kb_layout = "us,ru";
-          kb_variant = "altgr-intl,,";
-        }
-        {
-          name = "redragon-k630-keyboard";
-          kb_layout = "us,ru,de";
-          kb_variant = "altgr-intl,,";
-        }
-      ];
     };
   };
 }

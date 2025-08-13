@@ -17,6 +17,7 @@
       enable = true;
       nix-direnv.enable = true;
     };
+    thefuck.enable = true;
   };
 
   home.packages = with pkgs; [

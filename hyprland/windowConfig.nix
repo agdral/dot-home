@@ -1,9 +1,6 @@
 {...}: {
   wayland.windowManager.hyprland.settings = {
     windowrulev2 = [
-      # workspace 4
-      "workspace 4,class:(Vncviewer)"
-
       # Hypr Fly
       "monitor HDMI-A-1,class:(Hypr Fly)"
       "noborder,class:(Hypr Fly)"
@@ -13,9 +10,6 @@
       "float, class:(Hypr Fly)"
       "size 100% 100%, class:(Hypr Fly)"
       "center, class:(Hypr Fly)"
-
-      # Libre Office
-      "suppressevent maximize, class:^(libreoffice.*)$"
 
       # SafeEyes-0
       "monitor DP-1, title:(SafeEyes-0)"

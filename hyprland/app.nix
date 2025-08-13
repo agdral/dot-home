@@ -60,7 +60,6 @@
       "$ModS, T, movewindoworgroup, d"
     ];
 
-    # Move/resize windows with Mod + LMB/RMB and dragging
     bindm = [
       "$Modm, mouse:272, movewindow"
       "$Modm, mouse:273, resizewindow"
