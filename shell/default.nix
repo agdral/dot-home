@@ -8,6 +8,7 @@
     ./atuin
     ./btop
     ./gitui
+    ./payRespect
   ];
   programs = {
     starship.enable = true;
@@ -17,7 +18,6 @@
       enable = true;
       nix-direnv.enable = true;
     };
-    pay-respects.enable = true;
   };
 
   home.packages = with pkgs; [
