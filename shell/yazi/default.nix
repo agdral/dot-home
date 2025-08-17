@@ -4,11 +4,9 @@
 }: {
   home.packages = with pkgs; [
     unzip
-    ripgrep
     poppler
     ffmpegthumbnailer
     jq
-    fzf
     imagemagick
     exiftool
     mediainfo
@@ -18,8 +16,6 @@
     p7zip
   ];
   programs = {
-    fd.enable = true;
-
     yazi.enable = true;
   };
 
