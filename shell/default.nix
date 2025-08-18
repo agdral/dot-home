@@ -21,12 +21,16 @@
     fzf.enable = true;
     ripgrep.enable = true;
     gh.enable = true;
+    git.enable = true;
+    ssh.enable = true;
   };
 
   home.packages = with pkgs; [
     asciinema
     tidal-dl
     openssl
-    doppler
+    infisical
+    sshfs
+    inetutils
   ];
 }

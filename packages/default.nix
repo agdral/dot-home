@@ -12,14 +12,12 @@
 
   home.packages = with pkgs; [
     qalculate-gtk
-    obsidian
     qbittorrent
     localsend
     thunderbird
     tidal-hifi
     wayvnc
     tigervnc
-    nicotine-plus
     pavucontrol
     tauon
   ];
@@ -29,5 +27,7 @@
     ripgrep.enable = true;
     zathura.enable = true;
     imv.enable = true;
+    obsidian.enable = true;
+
   };
 }
