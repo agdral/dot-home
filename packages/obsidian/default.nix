@@ -2,7 +2,7 @@
   programs = {
     obsidian = {
       enable = true;
-      vault = {
+      vaults = {
         notes = {
           enable = true;
           target = "/hdd/kael/Notes";
