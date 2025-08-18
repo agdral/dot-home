@@ -4,9 +4,9 @@
     f-one = "cd /etc/nixos/ && sudo nix flake lock update $argv";
     sutup = ''
       cd /etc/nixos/
-      sudo nix flake lock update dotfile-default
-      sudo nix flake lock update home-default
-      sudo nix flake lock update nixvim-config
+      sudo nix flake update dotfile-default
+      sudo nix flake update home-default
+      sudo nix flake update nixvim-config
       sudo nixos-rebuild switch
     '';
     sudup = "sudo nixos-rebuild switch";
