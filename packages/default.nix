@@ -8,6 +8,7 @@
     ./swaync
     ./neovide
     ./proton
+    ./obsidian
   ];
 
   home.packages = with pkgs; [
@@ -27,7 +28,5 @@
     ripgrep.enable = true;
     zathura.enable = true;
     imv.enable = true;
-    obsidian.enable = true;
-
   };
 }
