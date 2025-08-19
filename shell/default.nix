@@ -21,7 +21,6 @@
     git.enable = true;
     ssh.enable = true;
     jujutsu.enable = true;
-    mosh.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -31,5 +30,6 @@
     infisical
     sshfs
     inetutils
+    mosh
   ];
 }
