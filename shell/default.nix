@@ -8,21 +8,20 @@
     ./btop
     ./gitui
     ./payRespect
+    ./direnv
   ];
   programs = {
     starship.enable = true;
     zoxide.enable = true;
     nix-index.enable = true;
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
     fd.enable = true;
     fzf.enable = true;
     ripgrep.enable = true;
     gh.enable = true;
     git.enable = true;
     ssh.enable = true;
+    jujutsu.enable = true;
+    mosh.enable = true;
   };
 
   home.packages = with pkgs; [

@@ -8,7 +8,7 @@
     ./swaync
     ./neovide
     ./proton
-    ./obsidian
+    # ./obsidian
   ];
 
   home.packages = with pkgs; [
@@ -21,6 +21,7 @@
     tigervnc
     pavucontrol
     tauon
+    obsidian
   ];
 
   programs = {

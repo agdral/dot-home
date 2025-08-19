@@ -5,7 +5,7 @@
       vaults = {
         notes = {
           enable = true;
-          target = "/hdd/kael/Notes";
+          target = "../../kael/Notes";
         };
       };
     };
