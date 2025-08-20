@@ -4,6 +4,7 @@
     "https://chat.deepseek.com"
     "https://drive.google.com/drive/u/0/home"
     "https://mail.proton.me"
+    "https://calendar.proton.me"
   ];
 
   firefoxPages = builtins.concatStringsSep " " pagesWebs;
@@ -57,14 +58,14 @@
     {
       key = "J";
       name = "editorL";
-      class = "Code";
+      class = "neovide";
       silent = false;
       group = true;
     }
     {
       key = "X";
       name = "editorR";
-      class = "neovide";
+      class = "Code";
       silent = false;
       group = true;
     }

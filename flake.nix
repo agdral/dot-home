@@ -2,14 +2,9 @@
   description = "Home Default";
 
   outputs = {...}: {
-    nixosModules.default = {...}: {
-      imports = [
-        ./interfaces.nix
-        ./hyprland
-        ./shell
-        ./packages
-        ./services
-      ];
-    };
+    nixosModules.hyprland = ./hyprland;
+    nixosModules.packages = ./packages;
+    nixosModules.shell = ./shell;
+    nixosModules.services = ./services;
   };
 }

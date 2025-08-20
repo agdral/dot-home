@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./interfaces.nix
     ./config.nix
     ./exec.nix
     ./app.nix
