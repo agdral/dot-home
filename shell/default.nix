@@ -31,5 +31,6 @@
     sshfs
     inetutils
     mosh
+    claude-code
   ];
 }

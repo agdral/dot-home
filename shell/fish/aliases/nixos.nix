@@ -12,5 +12,7 @@
     sudup = "sudo nixos-rebuild switch";
     suboot = "sudo nixos-rebuild boot";
     surmg = "sudo nix-collect-garbage -d";
+    nixp = "nix-shell --run fish -p $argv";
+    sf = "sudo su -s $(which fish)";
   };
 }
