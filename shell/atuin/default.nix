@@ -10,11 +10,10 @@
       style = "full";
       inline_height = 20;
     };
-
-    fish = {
-      interactiveShellInit = ''
-        bind up _atuin_bind_up
-      '';
-    };
+  };
+  fish = {
+    interactiveShellInit = ''
+      bind up _atuin_bind_up
+    '';
   };
 }
