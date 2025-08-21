@@ -9,7 +9,6 @@
     ./gitui
     ./payRespect
     ./direnv
-    ./claudeCode
   ];
   programs = {
     starship.enable = true;

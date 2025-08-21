@@ -1,4 +1,4 @@
-{...}: {
+{
   wayland.windowManager.hyprland.settings = {
     "$Modm" = "SUPER";
     "$HyprLm" = "SUPER CONTROL";
@@ -11,11 +11,6 @@
     "$F22" = "XF86TouchpadOn";
     "$F21" = "XF86TouchpadToggle";
     "$F20" = "XF86AudioMicMute";
-
-    exec-once = [
-      # Firefox
-      "[workspace 1 silent] firefox -p argonarch"
-      "imageShuffle /hdd/kael/Graficos/Wallpaper"
-    ];
   };
 }
+

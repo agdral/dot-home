@@ -7,6 +7,7 @@
       set -Ux ANTHROPIC_BASE_URL https://api.deepseek.com/anthropic
       set -Ux ANTHROPIC_MODEL deepseek-chat
       set -Ux ANTHROPIC_SMALL_FAST_MODEL deepseek-chat
+      set -Ux ANTHROPIC_AUTH_TOKEN $(echo $DEEPSEEK_API_KEY)
     '';
   };
 }
