@@ -21,6 +21,6 @@
       cd $result
       v
     '';
-    nt = "nc $(mktemp /tmp/temp-XXXXXX.txt)";
+    nt = "nc $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
   };
 }
