@@ -5,6 +5,7 @@
     ./general/workSpecial.nix
 
     ./binds/fnKeys.nix
+    ./binds/general.nix
     ./binds/media.nix
     ./binds/mouse.nix
     ./binds/numbers.nix

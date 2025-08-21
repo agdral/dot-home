@@ -30,10 +30,6 @@
       "$Modm, S, togglefloating, "
       "$Modm, V, togglegroup,"
 
-      # Zoom
-      "$Modm, M, exec, pypr zoom ++0.8"
-      "$Modm, B, exec, pypr zoom --0.8"
-
       # Move Windows of Group
       "$ModS, R, movewindoworgroup, l"
       "$ModS, N, movewindoworgroup, r"
