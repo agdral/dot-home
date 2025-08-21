@@ -2,8 +2,13 @@
   programs = {
     direnv = {
       enable = true;
-      enableFishIntegration = true;
       nix-direnv.enable = true;
+    };
+
+    fish = {
+      interactiveShellInit = ''
+        direnv hook fish | source
+      '';
     };
   };
 }

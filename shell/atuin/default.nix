@@ -2,7 +2,6 @@
   programs = {
     atuin = {
       enable = true;
-      enableFishIntegration = true;
       settings = {
         update_check = false;
         enter_accept = true;
@@ -14,6 +13,7 @@
     };
     fish = {
       interactiveShellInit = ''
+      atuin init fish | source
         bind up _atuin_bind_up
       '';
     };
