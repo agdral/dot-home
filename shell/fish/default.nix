@@ -3,9 +3,6 @@
     enable = true; 
     interactiveShellInit = ''
       set -g fish_greeting
-      direnv hook fish | source
-      atuin init fish | source
-      bind up _atuin_bind_up
 
       set path_docker "/hdd/kael/Documentos/Docker"
       set path_owngit "/hdd/falcon/Proyectos/OwnGithub"
