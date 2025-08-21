@@ -13,7 +13,7 @@
     };
     fish = {
       interactiveShellInit = ''
-      atuin init fish | source
+        atuin init fish | source
         bind up _atuin_bind_up
       '';
     };
