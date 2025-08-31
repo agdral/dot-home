@@ -1,12 +1,10 @@
 {...}: {
   programs.fish.functions = {
     nv = ''
-      neovide --wayland_app_id=neovide $argv >/dev/null 2>&1 &
-      disown
+      neovide --wayland_app_id=neovide
     '';
     nc = ''
-      neovide --wayland_app_id=Code $argv >/dev/null 2>&1 &
-      disown
+      neovide --wayland_app_id=Code $argv
     '';
     n = "nv .";
     v = "nc .";
