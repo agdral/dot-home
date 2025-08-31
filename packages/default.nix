@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  pkgs-stable,
+  ...
+}: {
   imports = [
     ./tridactyl
     ./walker
@@ -11,18 +15,19 @@
     # ./obsidian
   ];
 
-  home.packages = with pkgs; [
-    qalculate-gtk
-    qbittorrent
-    localsend
-    thunderbird
-    tidal-hifi
-    wayvnc
-    tigervnc
-    pavucontrol
-    tauon
-    obsidian
-  ];
+  home.packages =
+    (with pkgs; [
+      qalculate-gtk
+      qbittorrent
+      localsend
+      thunderbird
+      tidal-hifi
+      wayvnc
+      tigervnc
+      pavucontrol
+      obsidian
+    ])
+    ++ [pkgs-stable.tauon];
 
   programs = {
     mpv.enable = true;

@@ -5,8 +5,8 @@
       set -g fish_greeting
 
       set path_docker "/hdd/kael/Documentos/Docker"
-      set path_owngit "/hdd/falcon/Proyectos/OwnGithub"
-      set path_dot "/hdd/falcon/Proyectos/Dotfiles"
+      set path_owngit "/srv/OwnGithub"
+      set path_dot "/srv/Dotfiles"
       set path_nixos "/etc/nixos"
     '';
   };
