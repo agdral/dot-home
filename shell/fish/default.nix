@@ -16,6 +16,7 @@
     ./aliases/nushell.nix
     ./aliases/short.nix
     ./aliases/cloud.nix
+    ./aliases/git.nix
 
     ./functions/neovide.nix
     ./functions/develop.nix

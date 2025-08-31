@@ -32,6 +32,5 @@
     mosh
     claude-code
     pipx
-    ansible
   ];
 }
