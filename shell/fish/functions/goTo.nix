@@ -15,8 +15,7 @@
       handle_dir $argv[1] $path_dot"/Nixvim-Config/" 
     '';
     g-nixos = ''
-      cd $path_nixos
-      sudo -E neovide -- -c "cd $path_nixos"
+      handle_dir $argv[1] $path_nixos
     '';
     g-home = ''
       handle_dir $argv[1] $path_dot"/Home-Default/"
