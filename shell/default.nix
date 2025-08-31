@@ -25,12 +25,13 @@
 
   home.packages = with pkgs; [
     asciinema
-    tidal-dl
     openssl
     infisical
     sshfs
     inetutils
     mosh
     claude-code
+    pipx
+    ansible
   ];
 }
