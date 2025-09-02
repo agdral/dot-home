@@ -6,7 +6,7 @@
         username = {
           style_user = "white bold";
           style_root = "black bold";
-          format = "[$user]  ($style)";
+          format = "[$user]($style)  ";
           disabled = false;
           show_always = true;
         };
