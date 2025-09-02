@@ -8,7 +8,7 @@ with lib; let
   moduleOption = [
     "hypridle"
     "musicWake"
-    "openTablet"
+    # "openTablet"
     "safeEyes"
     "wlsunset"
     "espanso"
