@@ -9,9 +9,9 @@
     ./gitui
     ./payRespect
     ./direnv
+    ./starship
   ];
   programs = {
-    starship.enable = true;
     zoxide.enable = true;
     nix-index.enable = true;
     fd.enable = true;
