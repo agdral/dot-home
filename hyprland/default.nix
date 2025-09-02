@@ -2,7 +2,7 @@
   pkgs,
   ...
 }: let
-  utils = import ./utils.nix;
+  utils = import ../utils.nix;
   fileImports =
     utils.importNixFiles ./. [
       "default.nix"

@@ -1,8 +1,5 @@
-{
-  pkgs,
-  ...
-}: let
-  utils = import ./utils.nix;
+{pkgs, ...}: let
+  utils = import ../utils.nix;
   folderImports = utils.importFoldersExcept ./. [
     "claudeCode"
   ];
