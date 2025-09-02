@@ -5,6 +5,6 @@
     nixosModules.hyprland = ./hyprland;
     nixosModules.packages = ./packages;
     nixosModules.shell = ./shell;
-    nixosModules.servicess = ./services;
+    nixosModules.services = ./services;
   };
 }
