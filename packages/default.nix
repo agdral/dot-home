@@ -2,6 +2,7 @@
   utils = import ../utils.nix;
   folderImports =
     utils.importFoldersExcept ./. [
+      "obsidian"
     ];
 in {
   imports = folderImports;
