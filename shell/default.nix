@@ -11,6 +11,7 @@
     ./direnv
     ./starship
   ];
+
   programs = {
     zoxide.enable = true;
     nix-index.enable = true;
