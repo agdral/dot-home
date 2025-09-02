@@ -1,18 +1,10 @@
-{
-  pkgs,
-  ...
-}: {
-  imports = [
-    ./tridactyl
-    ./walker
-    ./waybar
-    ./firefox
-    ./chromium
-    ./swaync
-    ./neovide
-    ./proton
-    # ./obsidian
-  ];
+{pkgs, ...}: let
+  utils = import ./utils.nix;
+  folderImports =
+    utils.importFoldersExcept ./. [
+    ];
+in {
+  imports = folderImports;
 
   home.packages = with pkgs; [
     qalculate-gtk

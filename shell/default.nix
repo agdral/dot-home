@@ -1,16 +1,13 @@
-{pkgs, ...}: {
-  imports = [
-    ./fish
-    ./zsh
-    ./kitty
-    ./yazi
-    ./atuin
-    ./btop
-    ./gitui
-    ./payRespect
-    ./direnv
-    ./starship
+{
+  pkgs,
+  ...
+}: let
+  utils = import ./utils.nix;
+  folderImports = utils.importFoldersExcept ./. [
+    "claudeCode"
   ];
+in {
+  imports = folderImports;
 
   programs = {
     zoxide.enable = true;
@@ -31,7 +28,6 @@
     sshfs
     inetutils
     mosh
-    claude-code
     pipx
   ];
 }
