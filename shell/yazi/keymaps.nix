@@ -10,15 +10,6 @@
       run = "plugin zoxide";
       desc = "Jump to a directory via zoxide";
     }
-    {
-      on = ["<C-e>"];
-      run = ''shell 'nohup neovide --wayland_app_id=neovide "$@" -- -c "cd $@" >/dev/null 2>&1 &' --confirm '';
-    }
-
-    {
-      on = ["<C-o>"];
-      run = ''shell 'neovide --wayland_app_id=Code "$@" -- -c "cd $@" >/dev/null 2>&1 &' --confirm '';
-    }
 
     # Tab Switch
     {

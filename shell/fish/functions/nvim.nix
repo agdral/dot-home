@@ -6,9 +6,12 @@
     nc = ''
       neovide --wayland_app_id=Code $argv
     '';
-    n = "nv .";
-    v = "nc .";
+
+    n = "$editor_1 .";
+    v = "$editor_2 .";
+
     c = "code .";
+
     zn = ''
       set result (zoxide query $argv)
       cd $result
@@ -19,6 +22,7 @@
       cd $result
       v
     '';
-    nt = "nc $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
+
+    nt = "$editor_2 $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
   };
 }

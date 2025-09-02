@@ -3,25 +3,15 @@
     enable = true; 
     interactiveShellInit = ''
       set -g fish_greeting
-
-      set path_docker "/hdd/kael/Documentos/Docker"
-      set path_owngit "/srv/OwnGithub"
-      set path_dot "/srv/Dotfiles"
-      set path_nixos "/etc/nixos"
     '';
   };
 
   imports = [
-    ./aliases/nixos.nix
-    ./aliases/nushell.nix
-    ./aliases/short.nix
-    ./aliases/cloud.nix
-    ./aliases/git.nix
-
-    ./functions/neovide.nix
     ./functions/develop.nix
     ./functions/docker.nix
+    ./functions/editor.nix
+    ./functions/shell.nix
     ./functions/nvim.nix
-    ./functions/goTo.nix
+    ./functions/git.nix
   ];
 }

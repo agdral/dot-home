@@ -12,7 +12,7 @@
           text = "󰬊";
           fg = "#563d7c";
         }
-{
+        {
           name = ".stignore";
           text = "󰘿";
           fg = "#563d7c";
