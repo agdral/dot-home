@@ -1,14 +1,19 @@
-{
-  pkgs,
-  ...
-}: let
-  utils = import ../utils.nix;
-  fileImports =
-    utils.importNixFiles ./. [
-      "default.nix"
-    ];
-in {
-  imports = fileImports;
+{pkgs, ...}: {
+  imports = [
+    ./general/config.nix
+    ./general/variables.nix
+    ./general/workSpecial.nix
+
+    ./binds/fnKeys.nix
+    ./binds/general.nix
+    ./binds/media.nix
+    ./binds/mouse.nix
+    ./binds/numbers.nix
+    ./binds/windows.nix
+
+    ./rules/hyprFly.nix
+    ./rules/safeEyes.nix
+  ];
 
   home.packages = with pkgs; [
     hyprshot

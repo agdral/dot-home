@@ -1,15 +1,20 @@
-{
-  importFoldersExcept = lib: path: excludedFolders: let
-    directories = lib.filterAttrs (name: type: 
-      type == "directory" && !(builtins.elem name excludedFolders)
-    ) (builtins.readDir path);
-  in map (name: path + "/${name}") (lib.attrNames directories);
-
-  importNixFiles = lib: path: excludedFiles: let
-    nixFiles = lib.filterAttrs (name: type:
-      type == "regular" && 
-      lib.hasSuffix ".nix" name && 
-      !(builtins.elem name excludedFiles)
-    ) (builtins.readDir path);
-  in map (name: path + "/${name}") (lib.attrNames nixFiles);
+let
+  isDirectory = path: name: (builtins.readDir path).${name} == "directory";
+  isRegularFile = path: name: (builtins.readDir path).${name} == "regular";
+  isNixFile = name: builtins.match ".*\\.nix$" name != null;
+  notInList = list: item: !(builtins.elem item list);
+in {
+  importFoldersExcept = path: excludedFolders:
+    builtins.map (name: path + "/${name}")
+    (builtins.filter (name: 
+      isDirectory path name && notInList excludedFolders name)
+     (builtins.attrNames (builtins.readDir path)));
+    
+  importNixFiles = path: excludedFiles:
+    builtins.map (name: path + "/${name}")
+    (builtins.filter (name: 
+      isRegularFile path name && 
+      isNixFile name && 
+      notInList excludedFiles name)
+     (builtins.attrNames (builtins.readDir path)));
 }
