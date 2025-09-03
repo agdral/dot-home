@@ -12,12 +12,10 @@ in {
     qbittorrent
     localsend
     thunderbird
-    tidal-hifi
     wayvnc
     tigervnc
     pavucontrol
     obsidian
-    tauon
   ];
 
   programs = {
