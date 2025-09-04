@@ -1,6 +1,12 @@
 {...}: {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    systemd.enable = false;
+    package = null;
+    portalPackage = null;
+  };
   imports = [
-    ./general
+    ./settings
     ./services
     ./packages
     ./simples
