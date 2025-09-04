@@ -1,8 +1,7 @@
 {pkgs, ...}: let
   utils = import ../utils.nix;
   folderImports =
-    utils.importFoldersExcept ./. [
-    ];
+    utils.importFoldersExcept ./. [];
 in {
   imports = folderImports;
 
