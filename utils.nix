@@ -32,19 +32,4 @@ in {
         ) (builtins.attrNames (builtins.readDir path))
       )
     );
-
-  importNixSet = path:
-    builtins.foldl' (
-      acc: file:
-        acc ++ (import file) {}
-    ) [] (
-      builtins.map (name: path + "/${name}") (
-        builtins.filter (
-          name: let
-            entry = (builtins.readDir path).${name};
-          in
-            entry == "regular" && builtins.match ".*\\.nix$" name != null
-        ) (builtins.attrNames (builtins.readDir path))
-      )
-    );
 }
