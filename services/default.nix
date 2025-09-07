@@ -1,5 +1,4 @@
-{...}: let
-  utils = import ../utils.nix;
+{utils, ...}: let
   folderImports = utils.importFoldersExcept ./. [];
 in {
   imports = folderImports;

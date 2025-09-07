@@ -1,5 +1,4 @@
-{...}: let
-  utils = import ../../utils.nix;
+{utils, ...}: let
   special = utils.importNixList ./workers;
 
   bind =

@@ -1,17 +1,12 @@
-{...}: {
+{utils,...}: let
+  files = utils.importNixList ./workers;
+in {
+  imports = files;
   programs.fish = {
-    enable = true; 
+    enable = true;
     interactiveShellInit = ''
       set -g fish_greeting
     '';
   };
-
-  imports = [
-    ./functions/develop.nix
-    ./functions/docker.nix
-    ./functions/editor.nix
-    ./functions/shell.nix
-    ./functions/nvim.nix
-    ./functions/git.nix
-  ];
 }
+
