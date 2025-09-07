@@ -1,5 +1,5 @@
 {tools, ...}: {
-  imports = tools.importNixList ./functions;
+  imports = tools.importNixFiles ./functions [];
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
