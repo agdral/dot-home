@@ -1,7 +1,5 @@
-{utils,...}: let
-  files = utils.importNixList ./workers;
-in {
-  imports = files;
+{tools, ...}: {
+  imports = tools.importNixList ./workers;
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -9,4 +7,3 @@ in {
     '';
   };
 }
-

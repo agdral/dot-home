@@ -1,7 +1,5 @@
-{tools, ...}: let
-  folderImports = tools.importFoldersExcept ./. [];
-in {
-  imports = folderImports;
+{tools, ...}: {
+  imports = tools.importFoldersExcept ./. [];
 
   services = {
     copyq.enable = true;

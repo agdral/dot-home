@@ -1,12 +1,9 @@
 {
-  utils,
+  tools,
   pkgs,
   ...
-}: let
-  folderImports =
-    utils.importFoldersExcept ./. [];
-in {
-  imports = folderImports;
+}: {
+  imports = tools.importFoldersExcept ./. [];
 
   home.packages = with pkgs; [
     qalculate-gtk

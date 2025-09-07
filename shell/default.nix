@@ -2,12 +2,10 @@
   tools,
   pkgs,
   ...
-}: let
-  folderImports = tools.importFoldersExcept ./. [
+}: {
+  imports = tools.importFoldersExcept ./. [
     "claudeCode"
   ];
-in {
-  imports = folderImports;
 
   programs = {
     zoxide.enable = true;

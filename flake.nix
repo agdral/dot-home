@@ -2,7 +2,7 @@
   description = "Home Default";
 
   outputs = {...}: {
-    nixosModules.tools = ./utils.nix;
+    nixosModules.tools = ./tools.nix;
     nixosModules.hyprland = ./hyprland;
     nixosModules.packages = ./packages;
     nixosModules.shell = ./shell;

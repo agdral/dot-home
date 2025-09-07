@@ -1,7 +1,5 @@
-{utils, ...}: let
-  folderImports = utils.importFoldersExcept ./. [];
-in {
-  imports = folderImports;
+{tools, ...}: {
+  imports = tools.importFoldersExcept ./. [];
 
   services = {
     hyprpolkitagent.enable = true;

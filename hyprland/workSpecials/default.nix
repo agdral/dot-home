@@ -1,5 +1,5 @@
-{utils, ...}: let
-  special = utils.importNixList ./workers;
+{tools, ...}: let
+  special = tools.importNixList ./workers;
 
   bind =
     map (item: "$Modm, ${item.key}, togglespecialworkspace, ${item.name}") special
