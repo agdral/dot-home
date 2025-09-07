@@ -1,5 +1,5 @@
-{utils, ...}: let
-  folderImports = utils.importFoldersExcept ./. [];
+{tools, ...}: let
+  folderImports = tools.importFoldersExcept ./. [];
 in {
   imports = folderImports;
 
