@@ -1,9 +1,9 @@
 {
-  utils,
+  tools,
   pkgs,
   ...
 }: let
-  folderImports = utils.importFoldersExcept ./. [
+  folderImports = tools.importFoldersExcept ./. [
     "claudeCode"
   ];
 in {
