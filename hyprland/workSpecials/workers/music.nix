@@ -1,11 +1,11 @@
 [
-  {
-    key = "I";
-    name = "music";
-    app = "tauon";
-    class = "tauonmb";
-    group = true;
-  }
+#  {
+#    key = "I";
+#    name = "music";
+#    app = "tauon";
+#    class = "tauonmb";
+#    group = true;
+#  }
   {
     key = "I";
     name = "music";
