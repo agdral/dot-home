@@ -11,7 +11,7 @@ buildPythonApplication rec {
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1grd8rq2cx9357009591f2vkmg2qvw0dadydh8kx0ayp2mih8bg8";
+    sha256 = "091y2vplb7hyn7gz00902h47n8wkvhn52xh5hc3cgwrqby8h5mn0";
   };
 
   propagatedBuildInputs = [requests];
