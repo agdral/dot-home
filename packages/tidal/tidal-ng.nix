@@ -14,11 +14,13 @@
   tidalapi,
   python-ffmpeg,
   pycryptodome,
+  poetry-core,
 }:
 buildPythonApplication rec {
   pname = "tidal_dl_ng";
   version = "0.26.6";
   pyproject = true;
+  nativeBuildInputs = [poetry-core];
 
   src = fetchPypi {
     inherit pname version;
