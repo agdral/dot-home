@@ -1,20 +1,15 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.walker];
-  home.file = {
-    ".config/walker/config.toml".source = ./dot/config.toml;
-    ".config/walker/themes/vault.css".source = ./dot/themes/vault.css;
-    ".config/walker/themes/vault.toml".source = ./dot/themes/vault.toml;
-  };
+{pkgs-stable, ...}: {
+  home.packages = [pkgs-stable.opentabletdriver];
   systemd.user.services = {
-    walker = {
+    openTabletDriver = {
       Unit = {
-        Description = "Walker";
+        Description = "Open Tablet Driver";
         After = ["graphical-session.target"];
         Requisite = ["graphical-session.target"];
       };
       Service = {
         Type = "simple";
-        ExecStart = "${pkgs.walker}/bin/walker --gapplication-service";
+        ExecStart = "${pkgs-stable.opentabletdriver}/bin/otd-daemon";
         ExecReload = "kill -SIGUSR2 $MAINPID";
         Restart = "on-failure";
         RestartSec = 3;

@@ -3,6 +3,6 @@
     hyprshot
     hyprpicker
     hyprland-qtutils
+    grimblast
   ];
 }
-

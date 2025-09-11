@@ -1,4 +1,4 @@
-{...}: let
+let
   style_css = [
     ./dot/autohide_navigation_button.css
     ./dot/tridactyl.css

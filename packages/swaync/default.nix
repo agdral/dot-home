@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ...
 }:{
   home.packages = [pkgs.swaynotificationcenter pkgs.libnotify];

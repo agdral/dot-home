@@ -1,4 +1,4 @@
-{config, ...}: {
+{
   programs.waybar = {
     enable = true;
     style = builtins.readFile ./dot/style.css;
