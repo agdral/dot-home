@@ -1,18 +1,20 @@
 {
   lib,
-  python3Packages,
+  buildPythonApplication,
   fetchPypi,
+  requests,
 }:
-python3Packages.buildPythonPackage rec {
-  pname = "tidal-dl-ng";
+buildPythonApplication rec {
+  pname = "tidal_dl_ng";
   version = "0.26.6";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "091y2vplb7hyn7gz00902h47n8wkvhn52xh5hc3cgwrqby8h5mn0"; 
+    sha256 = "1grd8rq2cx9357009591f2vkmg2qvw0dadydh8kx0ayp2mih8bg8";
   };
 
-  propagatedBuildInputs = with python3Packages; [requests];
+  propagatedBuildInputs = [requests];
 
   meta = with lib; {
     description = "A downloader for Tidal music service";
