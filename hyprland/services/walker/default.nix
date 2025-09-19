@@ -11,6 +11,7 @@
         Description = "Walker";
         After = ["graphical-session.target"];
         Requisite = ["graphical-session.target"];
+        ConditionEnvironment = ["HYPRLAND_INSTANCE_SIGNATURE"];
       };
       Service = {
         Type = "simple";

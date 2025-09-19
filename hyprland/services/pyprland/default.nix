@@ -9,12 +9,14 @@
       term_classed = "kitty --class"
     '';
   };
+
   systemd.user.services = {
     pyprland = {
       Unit = {
         Description = "Pyprland";
         After = ["graphical-session.target"];
         Requisite = ["graphical-session.target"];
+        ConditionEnvironment = ["HYPRLAND_INSTANCE_SIGNATURE"];
       };
       Service = {
         Type = "simple";
