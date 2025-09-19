@@ -3,9 +3,7 @@
   pkgs,
   ...
 }: {
-  imports = tools.importFoldersExcept ./. [
-    "claudeCode"
-  ];
+  imports = tools.importFoldersExcept ./. [];
 
   programs = {
     zoxide.enable = true;
