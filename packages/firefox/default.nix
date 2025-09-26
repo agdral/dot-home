@@ -1,4 +1,4 @@
-{pkgs, ...}:let
+{pkgs, ...}: let
   contenidos = builtins.map builtins.readFile [
     ./dot/autohide_navigation_button.css
     ./dot/tridactyl.css
@@ -29,14 +29,21 @@ in {
         isDefault = true;
         id = 0;
         settings = import ./settings.nix;
+        extensions = import ./extensions.nix;
         userChrome = styles;
+        search.default = "bing";
       };
 
       secundary = {
         isDefault = false;
         id = 1;
         settings = import ./settings.nix;
+        extensions = import ./extensions.nix;
         userChrome = styles;
+        search = {
+          default = "bing";
+          force = true;
+        };
       };
     };
   };
