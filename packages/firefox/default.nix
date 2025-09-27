@@ -33,7 +33,7 @@ in {
         isDefault = true;
         id = 0;
         settings = import ./settings.nix;
-        extensions = with firefox-addons.packages.${pkgs.system}; [
+        extensions.packages = with firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
           tridactyl
@@ -51,7 +51,7 @@ in {
         isDefault = false;
         id = 1;
         settings = import ./settings.nix;
-        extensions = with firefox-addons.packages.${pkgs.system}; [
+        extensions.packages = with firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           darkreader
           tridactyl
