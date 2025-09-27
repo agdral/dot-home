@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  firefox-addons,
+  ...
+}: let
   contenidos = builtins.map builtins.readFile [
     ./dot/autohide_navigation_button.css
     ./dot/tridactyl.css
@@ -29,7 +33,16 @@ in {
         isDefault = true;
         id = 0;
         settings = import ./settings.nix;
-        extensions = import ./extensions.nix;
+        extensions = with firefox-addons.packages.${pkgs.system}; [
+          ublock-origin
+          darkreader
+          tridactyl
+          proton-pass
+          proton-vpn
+          sponsorblock
+          don-t-fuck-with-paste
+          bonjourr-startpage
+        ];
         userChrome = styles;
         search.default = "bing";
       };
@@ -38,7 +51,13 @@ in {
         isDefault = false;
         id = 1;
         settings = import ./settings.nix;
-        extensions = import ./extensions.nix;
+        extensions = with firefox-addons.packages.${pkgs.system}; [
+          ublock-origin
+          darkreader
+          tridactyl
+          proton-pass
+          bonjourr-startpage
+        ];
         userChrome = styles;
         search = {
           default = "bing";
