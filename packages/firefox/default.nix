@@ -44,7 +44,10 @@ in {
           bonjourr-startpage
         ];
         userChrome = styles;
-        search.default = "bing";
+        search = {
+          default = "bing";
+          force = true;
+        };
       };
 
       secundary = {
