@@ -1,6 +1,13 @@
-{...}: {
-  programs = {
-    starship = {
+{
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.dotShell;
+in {
+  config = mkIf cfg.starship {
+    programs.starship = {
       enable = true;
       settings = {
         username = {

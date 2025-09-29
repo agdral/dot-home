@@ -12,7 +12,7 @@ with lib; let
     };
 in {
   imports = tools.importFoldersExcept ./. [];
-  options.dotPack = {
+  options.dotShell = {
     apps = mkBoolOption "Enable apps default";
     atuin = mkBoolOption "Enable atuin default";
     btop = mkBoolOption "Enable btop default";

@@ -5,7 +5,7 @@
   ...
 }:
 with lib; let
-  cfg = config.dotPack;
+  cfg = config.dotShell;
 in {
   config = mkIf cfg.apps {
     programs = {

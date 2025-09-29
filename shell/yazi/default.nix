@@ -1,32 +1,40 @@
 {
+  config,
+  lib,
   pkgs,
   ...
-}: {
-  home.packages = with pkgs; [
-    unzip
-    poppler
-    ffmpegthumbnailer
-    jq
-    imagemagick
-    exiftool
-    mediainfo
-    ouch
-    transmission_4
-    epub-thumbnailer
-    p7zip
-  ];
-  programs = {
-    yazi.enable = true;
-  };
+}:
+with lib; let
+  cfg = config.dotShell;
+in {
+  config = mkIf cfg.yazi {
+    home.packages = with pkgs; [
+      unzip
+      poppler
+      ffmpegthumbnailer
+      jq
+      imagemagick
+      exiftool
+      mediainfo
+      ouch
+      transmission_4
+      epub-thumbnailer
+      p7zip
+    ];
 
-  home.file = {
-    ".config/yazi/init.lua".source = ./dot/init.lua;
-  };
+    programs = {
+      yazi.enable = true;
+    };
 
-  imports = [
-    ./settings.nix
-    ./theme.nix
-    ./keymaps.nix
-    ./plugins
-  ];
+    home.file = {
+      ".config/yazi/init.lua".source = ./dot/init.lua;
+    };
+
+    imports = [
+      ./settings.nix
+      ./theme.nix
+      ./keymaps.nix
+      ./plugins
+    ];
+  };
 }
