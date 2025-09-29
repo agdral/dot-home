@@ -1,4 +1,11 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.dotPack;
   proton-pass-new = pkgs.proton-pass.overrideAttrs (oldAttrs: {
     version = "1.31.4";
 
@@ -8,8 +15,10 @@
     };
   });
 in {
-  home.packages = with pkgs; [
-    proton-pass-new
-    protonmail-desktop
-  ];
+  config = mkIf cfg.proton {
+    home.packages = with pkgs; [
+      proton-pass-new
+      protonmail-desktop
+    ];
+  };
 }
