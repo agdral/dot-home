@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.dotPack;
 in {
-  config = mkIf cfg.music {
+  config = mkIf cfg.apps {
     home.packages = with pkgs; [
       fdupes
       pulseaudio
