@@ -5,5 +5,6 @@
     homeModules.packages = ./packages;
     homeModules.services = ./services;
     homeModules.shell = ./shell;
+    homeModules.yazi = ./yazi;
   };
 }
