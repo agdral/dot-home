@@ -62,8 +62,6 @@ in {
           extensions.packages = with firefox-addons.packages.${pkgs.system}; [
             ublock-origin
             darkreader
-            tridactyl
-            proton-pass
             bonjourr-startpage
           ];
           userChrome = styles;
