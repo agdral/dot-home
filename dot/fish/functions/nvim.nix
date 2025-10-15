@@ -1,9 +1,9 @@
 {...}: {
   programs.fish.functions = {
-    nv = ''
+    cv = ''
       neovide --wayland_app_id=neovide $argv
     '';
-    nc = ''
+    cn = ''
       neovide --wayland_app_id=Code $argv
     '';
 

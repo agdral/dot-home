@@ -21,7 +21,7 @@ in {
       };
       fish = {
         interactiveShellInit = ''
-          atuin init fish | source
+          atuin init fish | sed "s/-k up/up/g" | source 
           bind up _atuin_bind_up
         '';
       };
