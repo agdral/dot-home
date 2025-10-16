@@ -1,14 +1,14 @@
 {...}: {
   programs.fish.functions = {
-    cv = ''
+    cn = ''
       neovide --wayland_app_id=neovide $argv
     '';
-    cn = ''
+    cv = ''
       neovide --wayland_app_id=Code $argv
     '';
 
-    n = "$editor_1 .";
-    v = "$editor_2 .";
+    n = "cn .";
+    v = "cv .";
 
     c = "code .";
 
@@ -23,6 +23,6 @@
       v
     '';
 
-    nt = "$editor_2 $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
+    nt = "cv $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
   };
 }
