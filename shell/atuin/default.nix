@@ -10,6 +10,7 @@ in {
     programs = {
       atuin = {
         enable = true;
+        enableFishIntegration = false;
         settings = {
           update_check = false;
           enter_accept = true;
@@ -21,7 +22,7 @@ in {
       };
       fish = {
         interactiveShellInit = ''
-          atuin init fish | sed "s/-k up/up/g" | source 
+          atuin init fish | sed "s/-k up/up/g" | source
           bind up _atuin_bind_up
         '';
       };
