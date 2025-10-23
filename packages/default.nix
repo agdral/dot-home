@@ -18,5 +18,6 @@ in {
     neovide = mkBoolOption "Enable neovide";
     proton = mkBoolOption "Enable proton";
     tidal = mkBoolOption "Enable tidal";
+    qmk = mkBoolOption "Enable qmk";
   };
 }

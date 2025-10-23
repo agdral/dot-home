@@ -10,7 +10,6 @@ in {
   config = mkIf cfg.apps {
     home.packages = with pkgs; [
       fdupes
-      pulseaudio
       playerctl
       pamixer
       pavucontrol

@@ -43,7 +43,6 @@ in {
             darkreader
             tridactyl
             proton-pass
-            proton-vpn
             sponsorblock
             don-t-fuck-with-paste
             bonjourr-startpage
