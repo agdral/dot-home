@@ -4,7 +4,7 @@
     "lyrics_file": false,
     "video_download": true,
     "download_delay": true,
-    "download_base_path": "/hdd/kael/Music/Music",
+    "download_base_path": "/data/kael/Music/Music",
     "quality_audio": "LOSSLESS",
     "quality_video": "480",
     "format_album": "Albums/{album_artist} - {album_title}{album_explicit}/{track_volume_num_optional}{album_track_num}. {artist_name} - {track_title}{album_explicit}",

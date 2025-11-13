@@ -12,7 +12,7 @@
     opener = {
       edit = [
         {
-          run = ''nohup neovide --wayland_app_id=neovide "$@" -- -c "cd $@" >/dev/null 2>&1 &'';
+          run = ''neovide --wayland_app_id=neovide "$@" -- -c "cd $@"'';
           desc = "Neovide";
           block = true;
           for = "unix";
@@ -29,7 +29,7 @@
     plugin = {
       prepend_preloaders = [
         {
-          mime = "/hdd/kael/Musica/Music/**";
+          mime = "/data/kael/Musica/Music/**";
           run = "exifaudio";
         }
       ];
