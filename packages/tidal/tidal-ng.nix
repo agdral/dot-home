@@ -18,7 +18,7 @@
 }:
 buildPythonApplication rec {
   pname = "tidal_dl_ng";
-  version = "0.26.6";
+  version = "0.31.4";
   pyproject = true;
   nativeBuildInputs = [poetry-core];
 
