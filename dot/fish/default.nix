@@ -3,8 +3,8 @@
   lib,
   ...
 }: let
-  functionsF = lib.attrsets.mergeAttrsList (tools.importNixFiles ./functions []);
-  abbrsF = lib.attrsets.mergeAttrsList (tools.importNixFiles ./abbrs []);
+  functionsF = lib.attrsets.mergeAttrsList (builtins.map import (tools.importNixFiles ./functions []));
+  abbrsF = lib.attrsets.mergeAttrsList (builtins.map import (tools.importNixFiles ./abbrs []));
 in {
   programs.fish = {
     enable = true;
