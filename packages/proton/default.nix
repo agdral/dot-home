@@ -7,11 +7,11 @@
 with lib; let
   cfg = config.dotPack;
   proton-pass-new = pkgs.proton-pass.overrideAttrs (oldAttrs: {
-    version = "1.32.11";
+    version = "1.33.0";
 
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.32.11_amd64.deb";
-      sha256 = "0wda2cxf7ddawkr96ydjxmnwyihp6h3y01vv8gac9iygpfw0pv1s";
+      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.33.0_amd64.deb";
+      sha256 = "1a5cpvb1h12dl0613ccv1rvkmz9rp1kp0i5xhlb38vlsbxhkxc0h";
     };
   });
 
