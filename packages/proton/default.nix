@@ -16,11 +16,11 @@ with lib; let
   });
 
   proton-mail-new = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
-    version = "1.10.1";
+    version = "1.10.10";
 
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/mail/linux/1.10.1/ProtonMail-desktop-beta.deb";
-      sha256 = "0gphc7dsz0795qyl0l6cmvz51b7p9aacrziw42abahb2k9q1pgay";
+      url = "https://proton.me/download/mail/linux/1.10.10/ProtonMail-desktop-beta.deb";
+      sha256 = "0w0a0lkff4fg0sn221p6yn0ffyw132hnqm8i8s37fg4jnbmf00ks";
     };
   });
 in {
