@@ -11,6 +11,7 @@
   rich,
   toml,
   typer,
+  ansi2html,
   tidalapi,
   python-ffmpeg,
   pycryptodome,
@@ -18,13 +19,13 @@
 }:
 buildPythonApplication rec {
   pname = "tidal_dl_ng";
-  version = "0.31.4";
+  version = "0.33.0";
   pyproject = true;
   nativeBuildInputs = [poetry-core];
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "091y2vplb7hyn7gz00902h47n8wkvhn52xh5hc3cgwrqby8h5mn0";
+    sha256 = "sha256-rOMyxnT7uVnMbn678DFtqAu4+Uc5VFGcqGI0jxplnpc=";
   };
 
   propagatedBuildInputs = [
@@ -40,7 +41,10 @@ buildPythonApplication rec {
     tidalapi
     python-ffmpeg
     pycryptodome
+    ansi2html
   ];
+
+  pythonRemoveDeps = true;
 
   meta = with lib; {
     description = "A downloader for Tidal music service";
