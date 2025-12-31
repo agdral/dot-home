@@ -10,13 +10,13 @@ with lib; let
     version = "1.33.3";
 
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.33.0_amd64.deb";
+      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.33.3_amd64.deb";
       sha256 = "1nc8i03nfy8rldplmd07zp6qaff58bpcdp4yimsx48dmxygyivym";
     };
   });
 
   proton-mail-new = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
-    version = "1.10.10";
+    version = "1.11.0";
 
     src = pkgs.fetchurl {
       url = "https://proton.me/download/mail/linux/1.11.0/ProtonMail-desktop-beta.deb";
