@@ -34,8 +34,4 @@ in {
   home.file = {
     ".config/yazi/init.lua".source = ./dot/init.lua;
   };
-
-  imports = [
-    ./plugins
-  ];
 }
