@@ -6,5 +6,5 @@
     hash = "sha256-wHTR8frrFL3cUD8fvSTO+m/77wQ7auVjTZ1uCTB/UzU=";
   };
 in {
-  programs.yazi.plugins.epub-preview = repo;
+  epub-preview = repo;
 }

@@ -29,7 +29,7 @@
     plugin = {
       prepend_preloaders = [
         {
-          mime = "/data/kael/Musica/Music/**";
+          mime = "/data/kael/Music/Music/**";
           run = "exifaudio";
         }
       ];

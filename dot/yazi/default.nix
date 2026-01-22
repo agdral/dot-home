@@ -1,4 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  tools,
+  ...
+}: let
+  settingsF = import ./settings.nix;
+  themeF = import ./theme.nix;
+  keymapsF = tools.importNixList ./keymaps;
+  pluginsF = lib.attrsets.mergeAttrsList (map import (tools.importNixFiles ./plugins []));
+in {
   home.packages = with pkgs; [
     unzip
     poppler
@@ -13,8 +23,12 @@
     p7zip
   ];
 
-  programs = {
-    yazi.enable = true;
+  programs.yazi = {
+    enable = true;
+    settings = settingsF;
+    theme = themeF;
+    keymap.mgr.prepend_keymap = keymapsF;
+    plugins = pluginsF;
   };
 
   home.file = {
@@ -22,9 +36,6 @@
   };
 
   imports = [
-    ./settings.nix
-    ./theme.nix
-    ./keymaps.nix
     ./plugins
   ];
 }

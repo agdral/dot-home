@@ -6,6 +6,6 @@
     hash = "sha256-RWCqWBpbmU3sh/A+LBJPXL/AY292blKb/zZXGvIA5/o=";
   };
 in {
-  programs.yazi.plugins.exifaudio = repo;
+  exifaudio = repo;
 }
 

@@ -4,8 +4,8 @@
   config,
   ...
 }: let
-  functionsF = lib.attrsets.mergeAttrsList (builtins.map import (tools.importNixFiles ./functions []));
-  abbrsF = lib.attrsets.mergeAttrsList (builtins.map import (tools.importNixFiles ./abbrs []));
+  functionsF = lib.attrsets.mergeAttrsList (map import (tools.importNixFiles ./functions []));
+  abbrsF = lib.attrsets.mergeAttrsList (map import (tools.importNixFiles ./abbrs []));
   cfg = config.dotShell;
 in {
   config = lib.mkIf cfg.fish {

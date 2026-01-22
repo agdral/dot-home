@@ -6,6 +6,6 @@
     hash = "sha256-VhJvNRKHxVla4v2JJeSnP0MOMBFSm4k7gfqjrHOMVlo=";
   };
 in {
-  programs.yazi.plugins.torrent-preview = repo;
+  torrent-preview = repo;
 }
 
