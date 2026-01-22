@@ -7,7 +7,7 @@
   settingsF = import ./settings.nix;
   themeF = import ./theme.nix;
   keymapsF = tools.importNixList ./keymaps;
-  pluginsF = import ./plugins.nix;
+  pluginsF = import ./plugins.nix { inherit pkgs; };
 in {
   home.packages = with pkgs; [
     unzip

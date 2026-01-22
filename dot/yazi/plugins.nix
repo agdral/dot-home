@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs}: let
   epubP = pkgs.fetchFromGitHub {
     owner = "kirasok";
     repo = "epub-preview.yazi";
