@@ -7,7 +7,7 @@
   settingsF = import ./settings.nix;
   themeF = import ./theme.nix;
   keymapsF = tools.importNixList ./keymaps;
-  pluginsF = lib.attrsets.mergeAttrsList (map import (tools.importNixFiles ./plugins []));
+  pluginsF = import ./plugins.nix;
 in {
   home.packages = with pkgs; [
     unzip
