@@ -13,5 +13,9 @@ in {
         qmk_home = ~/.qmk/qmk_firmware
       '';
     };
+
+    home.packages = with pkgs; [
+      qmk
+    ];
   };
 }

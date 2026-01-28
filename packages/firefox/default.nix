@@ -7,7 +7,7 @@
 }:
 with lib; let
   cfg = config.dotPack;
-  contenidos = builtins.map builtins.readFile [
+  contenidos = map builtins.readFile [
     ./dot/autohide_navigation_button.css
     ./dot/tridactyl.css
   ];
