@@ -16,7 +16,7 @@ with lib; let
   });
 
   proton-mail-new = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
-    version = "1.11.0";
+    version = "1.12.0";
 
     src = pkgs.fetchurl {
       url = "https://proton.me/download/mail/linux/1.12.0/ProtonMail-desktop-beta.deb";

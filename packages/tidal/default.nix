@@ -14,8 +14,8 @@ in {
       tidalDlNg
     ];
 
-    # home.file = {
-    #   ".config/tidal-hifi/config.json".source = ./dot/config.json;
-    # };
+    home.file = {
+      ".config/tidal_dl_ng/settings.json".source = ./dot/settings.json;
+    };
   };
 }
