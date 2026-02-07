@@ -4,4 +4,5 @@
   ggp = "git push";
   ggl = "git pull";
   ggc = "git clone";
+  ggs = "git status";
 }

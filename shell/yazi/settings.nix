@@ -28,7 +28,7 @@
   plugin = {
     prepend_preloaders = [
       {
-        mime = "/data/kael/Music/Music/**";
+        mime = "/mnt/kael/data/Music/Lossless/**";
         run = "exifaudio";
       }
     ];
