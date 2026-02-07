@@ -16,6 +16,7 @@
   python-ffmpeg,
   pycryptodome,
   poetry-core,
+  pyside6,
 }:
 buildPythonApplication rec {
   pname = "tidal_dl_ng";
@@ -42,6 +43,7 @@ buildPythonApplication rec {
     python-ffmpeg
     pycryptodome
     ansi2html
+    pyside6
   ];
 
   pythonRemoveDeps = true;
