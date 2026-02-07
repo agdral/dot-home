@@ -19,14 +19,14 @@
   pyside6,
 }:
 buildPythonApplication rec {
-  pname = "tidal_dl_ng";
-  version = "0.33.0";
+  pname = "tidal_dl_ng_for_dj";
+  version = "0.33.2";
   pyproject = true;
   nativeBuildInputs = [poetry-core];
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "sha256-rOMyxnT7uVnMbn678DFtqAu4+Uc5VFGcqGI0jxplnpc=";
+    sha256 = "0m7wxyb66s3yz5j796zqll363vwb1ap13b8mngxs4mwr3a05qkpb";
   };
 
   propagatedBuildInputs = [
@@ -50,7 +50,7 @@ buildPythonApplication rec {
 
   meta = with lib; {
     description = "A downloader for Tidal music service";
-    homepage = "https://github.com/exislow/tidal-dl-ng";
+    homepage = "https://github.com/botezat/newNG";
     license = licenses.mit;
   };
 }
