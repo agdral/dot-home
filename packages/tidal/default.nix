@@ -15,7 +15,9 @@ in {
     ];
 
     home.file = {
-      ".config/tidal_dl_ng-dev/settings.json".source = ./dot/settings.json;
+      ".config/tidal_dl_ng-dev/settings.json".source =
+        config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/dotfiles/tidal/settings.json";
     };
   };
 }
