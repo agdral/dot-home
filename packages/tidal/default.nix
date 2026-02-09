@@ -7,6 +7,7 @@
 with lib; let
   cfg = config.dotPack;
   tidalDlNg = pkgs.python3Packages.callPackage ./tidal-ng.nix {};
+  settingsPath = "${config.home.homeDirectory}/.config/tidal_dl_ng-dev/settings.json";
 in {
   config = mkIf cfg.tidal {
     home.packages = [
@@ -14,10 +15,12 @@ in {
       tidalDlNg
     ];
 
-    home.file = {
-      ".config/tidal_dl_ng-dev/settings.json".source =
-        config.lib.file.mkOutOfStoreSymlink
-        ./dot/settings.json;
-    };
+    home.activation.tidalSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      if [ ! -f "${settingsPath}" ]; then
+        $DRY_RUN_CMD mkdir -p "$(dirname "${settingsPath}")"
+        $DRY_RUN_CMD cp ${./dot/settings.json} "${settingsPath}"
+        $DRY_RUN_CMD chmod u+w "${settingsPath}"
+      fi
+    '';
   };
 }
