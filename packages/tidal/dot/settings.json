@@ -6,8 +6,8 @@
     "video_download": true,
     "download_delay": true,
     "download_base_path": "/data/kael/Music/Lossless",
-    "quality_audio": "LOSSLESS",
-    "quality_video": "480",
+    "quality_audio": "HI_RES_LOSSLESS",
+    "quality_video": "1080",
     "download_dolby_atmos": false,
     "format_album": "{artist_name} - {track_title}",
     "format_playlist": "{artist_name} - {track_title}",
@@ -16,7 +16,7 @@
     "format_video": "{artist_name} - {track_title}",
     "video_convert_mp4": true,
     "path_binary_ffmpeg": "",
-    "metadata_cover_dimension": "320",
+    "metadata_cover_dimension": "1280",
     "metadata_cover_embed": true,
     "mark_explicit": false,
     "cover_album_file": true,
@@ -40,6 +40,5 @@
     "filename_delimiter_album_artist": ", ",
     "metadata_target_upc": "UPC",
     "api_rate_limit_batch_size": 20,
-    "api_rate_limit_delay_sec": 3.0,
-    "initial_key_format": "alphanumeric"
+    "api_rate_limit_delay_sec": 3.0
 }
