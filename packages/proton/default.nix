@@ -10,8 +10,8 @@ with lib; let
     version = "1.33.5";
 
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.33.5_amd64.deb";
-      sha256 = "06vfw22dwfsb8fym9gg1ykivbqph8r9vgkqyvgrychjliym36zyq";
+      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.34.2_amd64.deb";
+      sha256 = "1qaj36vwyrz4p4ibfwxgsf3hf1yizbr00gw2by1x9nnhxkb1154b";
     };
   });
 
