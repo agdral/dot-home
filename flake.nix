@@ -2,7 +2,7 @@
   description = "Home Dotfiles";
 
   inputs = {
-    import-tree.url = "github:vic/import-tree";
+    import-tree.follows = "import-tree";
   };
 
   outputs = inputs @ {import-tree, ...}: {
