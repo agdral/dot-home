@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.default = mkOption {
+  options.dotShell.kitty = mkOption {
     type = types.bool;
     default = false;
   };
