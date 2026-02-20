@@ -6,7 +6,7 @@
 }:
 with lib; let
   cfg = config.dotPack;
-  # tidalDlNg = pkgs.python3Packages.callPackage ./tidal-ng.nix {};
+  tidalDlNg = pkgs.python3Packages.callPackage ./tidal-ng.nix {};
   settingsPath = "${config.home.homeDirectory}/.config/tidal_dl_ng-dev/settings.json";
 in {
   options.dotPack.tidal = mkOption {
@@ -16,7 +16,7 @@ in {
   config = mkIf cfg.tidal {
     home.packages = [
       pkgs.tidal-hifi
-      # tidalDlNg
+      tidalDlNg
     ];
 
     home.activation.tidalSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
