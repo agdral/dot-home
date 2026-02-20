@@ -1,6 +1,0 @@
-{
-  tools,
-  ...
-}: {
-  imports = tools.importFoldersExcept ./. [];
-}

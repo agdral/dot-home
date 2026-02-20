@@ -1,9 +1,11 @@
 {
   description = "Home Dotfiles";
 
-  outputs = {...}: {
-    homeModules.packages = ./packages;
-    homeModules.services = ./services;
-    homeModules.shell = ./shell;
+  outputs = inputs @ {import-tree, ...}: {
+    homeModules = {
+      packages = import-tree ./packages;
+      services = import-tree ./services;
+      shell = import-tree ./shell;
+    };
   };
 }
