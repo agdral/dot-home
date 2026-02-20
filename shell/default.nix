@@ -1,9 +1,6 @@
 {
-  lib,
-  import-tree,
+  tools,
   ...
 }: {
-  imports = [
-    (import-tree.filter (path: lib.hasSuffix "default.nix" path) ./.)
-  ];
+  imports = tools.importFoldersExcept ./. [];
 }
