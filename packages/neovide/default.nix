@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.dotPack;
 in {
-  options.dotServ.neovide = mkOption {
+  options.dotPack.neovide = mkOption {
     type = types.bool;
     default = false;
   };

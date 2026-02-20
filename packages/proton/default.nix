@@ -24,7 +24,7 @@ with lib; let
     };
   });
 in {
-  options.dotServ.proton = mkOption {
+  options.dotPack.proton = mkOption {
     type = types.bool;
     default = false;
   };

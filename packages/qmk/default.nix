@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.dotPack;
 in {
-  options.dotServ.qmk = mkOption {
+  options.dotPack.qmk = mkOption {
     type = types.bool;
     default = false;
   };

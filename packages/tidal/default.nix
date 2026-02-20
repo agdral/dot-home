@@ -9,7 +9,7 @@ with lib; let
   tidalDlNg = pkgs.python3Packages.callPackage ./tidal-ng.nix {};
   settingsPath = "${config.home.homeDirectory}/.config/tidal_dl_ng-dev/settings.json";
 in {
-  options.dotServ.tidal = mkOption {
+  options.dotPack.tidal = mkOption {
     type = types.bool;
     default = false;
   };
