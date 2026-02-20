@@ -13,6 +13,10 @@ with lib; let
   ];
   styles = builtins.concatStringsSep "\n" contenidos;
 in {
+  options.dotServ.firefox = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.firefox {
     home.file = {
       ".config/tridactyl/tridactylrc".source = ./dot/tridactylrc;

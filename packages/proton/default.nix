@@ -24,6 +24,10 @@ with lib; let
     };
   });
 in {
+  options.dotServ.proton = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.proton {
     home.packages = [
       proton-pass-new

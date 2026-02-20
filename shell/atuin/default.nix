@@ -6,6 +6,10 @@
 with lib; let
   cfg = config.dotShell;
 in {
+  options.dotShell.atuin = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.atuin {
     programs = {
       atuin = {

@@ -1,5 +1,5 @@
 {
-  description = "Home Default";
+  description = "Home Dotfiles";
 
   outputs = {...}: {
     homeModules.packages = ./packages;

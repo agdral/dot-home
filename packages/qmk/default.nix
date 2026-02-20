@@ -7,6 +7,10 @@
 with lib; let
   cfg = config.dotPack;
 in {
+  options.dotServ.qmk = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.qmk {
     home.file = {
       ".config/qmk/qmk.ini".text = ''

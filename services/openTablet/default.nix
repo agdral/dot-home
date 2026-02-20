@@ -7,6 +7,10 @@
 with lib; let
   cfg = config.dotServ;
 in {
+  options.dotServ.openTablet = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.openTablet {
     home.packages = [pkgs-stable.opentabletdriver];
     systemd.user.services = {

@@ -1,20 +1,9 @@
 {
   lib,
-  tools,
+  import-tree,
   ...
-}:
-with lib; let
-  mkBoolOption = desc:
-    mkOption {
-      type = types.bool;
-      default = false;
-      description = desc;
-    };
-in {
-  imports = tools.importFoldersExcept ./. [];
-  options.dotServ = {
-    syncthing = mkBoolOption "Enable Syncthing";
-    openTablet = mkBoolOption "Enable openTablet";
-    wlsunset = mkBoolOption "Enable wlsunset";
-  };
+}: {
+  imports = [
+    (import-tree.filter (path: lib.hasSuffix "default.nix" path) ./.)
+  ];
 }

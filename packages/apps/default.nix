@@ -7,6 +7,10 @@
 with lib; let
   cfg = config.dotPack;
 in {
+  options.dotServ.apps = mkOption {
+    type = types.bool;
+    default = false;
+  };
   config = mkIf cfg.apps {
     home.packages = with pkgs; [
       fdupes
