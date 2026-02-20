@@ -1,11 +1,15 @@
 {
   description = "Home Dotfiles";
 
-  outputs = {import-tree, ...}: {
+  outputs = {
+    lib,
+    import-tree,
+    ...
+  }: {
     homeModules = {
-      packages = import-tree ./packages;
-      services = import-tree ./services;
-      shell = import-tree ./shell;
+      packages = import-tree.filter (lib.hasSuffix "/default.nix") ./packages;
+      services = import-tree.filter (lib.hasSuffix "/default.nix") ./services;
+      shell = import-tree.filter (lib.hasSuffix "/default.nix") ./shell;
     };
   };
 }
