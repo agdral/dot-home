@@ -9,4 +9,15 @@
   dv-view = ''
     docker run -it --rm -v $argv[1]:/data alpine sh
   '';
+  dc-i1 = ''
+    infisical export --env=prod --format=dotenv > .env
+    docker compose up -d
+    rm -f .env 
+  '';
+  dc-i2 = ''
+    infisical export --env=prod --format=dotenv > .env
+    infisical export --env=db --format=dotenv > .db.env
+    docker compose up -d
+    rm -f .env .db.env
+  '';
 }
