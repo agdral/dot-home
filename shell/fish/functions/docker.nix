@@ -1,6 +1,6 @@
 {
-  dks = "docker ps -a --format 'table {{.ID}}\\t{{.Names}}'";
-  dka = "docker ps --format 'table {{.ID}}\\t{{.Names}}'";
+  dka = "docker ps -a --format 'table {{.ID}}\\t{{.Names}}'";
+  dks = "docker ps --format 'table {{.ID}}\\t{{.Names}}'";
   dc = "docker compose $argv";
   dv = "docker volume $argv";
   dv-copy = ''

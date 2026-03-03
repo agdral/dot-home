@@ -17,7 +17,6 @@ in {
       playerctl
       pamixer
       pavucontrol
-      dupeguru
     ];
     programs = {
       mpv.enable = true;
