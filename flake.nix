@@ -3,22 +3,17 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     import-tree.url = "github:vic/import-tree";
+    joinix.url = "github:agdral/joinix";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
 
     # Tester Modules
-    nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dot-nixos = {
-      url = "github:agdral/dot-nixos";
-      inputs.import-tree.follows = "import-tree";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixstable.follows = "nixstable";
     };
   };
 
@@ -35,11 +30,11 @@
       inherit system;
       config.allowUnfree = true;
     };
-    tools = import inputs.dot-nixos.nixosModules.tools;
+    joinix = import inputs.joinix.homeModules.default;
   in {
     homeModules.packages = {
       _module.args = {
-        inherit firefox-addons pkgs-stable tools;
+        inherit firefox-addons pkgs-stable joinix;
       };
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)

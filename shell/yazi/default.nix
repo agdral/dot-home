@@ -2,13 +2,13 @@
   pkgs,
   lib,
   config,
-  tools,
+  joinix,
   ...
 }:
 with lib; let
   settingsF = import ./settings.nix;
   themeF = import ./theme.nix;
-  keymapsF = tools.importNixList ./keymaps;
+  keymapsF = joinix.importNixList ./keymaps;
   pluginsF = import ./plugins.nix {inherit pkgs;};
   cfg = config.dotShell;
 in {

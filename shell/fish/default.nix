@@ -1,12 +1,12 @@
 {
-  tools,
+  joinix,
   lib,
   config,
   ...
 }:
 with lib; let
-  functionsF = lib.attrsets.mergeAttrsList (map import (tools.importNixFiles ./functions []));
-  abbrsF = lib.attrsets.mergeAttrsList (map import (tools.importNixFiles ./abbrs []));
+  functionsF = lib.attrsets.mergeAttrsList (map import (joinix.importNixFiles ./functions []));
+  abbrsF = lib.attrsets.mergeAttrsList (map import (joinix.importNixFiles ./abbrs []));
   cfg = config.dotShell;
 in {
   options.dotShell.fish = mkOption {
