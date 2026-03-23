@@ -32,20 +32,20 @@
     };
     joinix = inputs.joinix.homeModules.default;
   in {
-    homeModules.packages = {
+    homeModules.default = {
       _module.args = {inherit firefox-addons pkgs-stable joinix;};
+    };
+    homeModules.packages = {
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)
       ];
     };
     homeModules.services = {
-      _module.args = {inherit joinix;};
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./services)
       ];
     };
     homeModules.shell = {
-      _module.args = {inherit joinix;};
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./shell)
       ];

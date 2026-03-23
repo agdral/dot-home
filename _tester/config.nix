@@ -28,6 +28,7 @@ in {
 
         home-manager.users.tester = {
           imports = [
+            self.homeModules.default
             self.homeModules.packages
             self.homeModules.services
             self.homeModules.shell
