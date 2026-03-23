@@ -5,20 +5,9 @@
   ...
 }: let
   system = "x86_64-linux";
-  tools = import inputs.dot-nixos.nixosModules.tools;
-
-  pkgs-stable = import inputs.nixstable {
-    inherit system;
-    config.allowUnfree = true;
-  };
 in {
   tester = lib.nixosSystem {
     inherit system;
-    specialArgs =
-      inputs
-      // {
-        inherit inputs tools pkgs-stable;
-      };
     modules = [
       inputs.home-manager.nixosModules.home-manager
 
@@ -35,12 +24,8 @@ in {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs =
-            inputs
-            // {
-              inherit pkgs-stable tools;
-            };
         };
+
         home-manager.users.tester = {
           imports = [
             self.homeModules.packages

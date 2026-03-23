@@ -20,7 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixstable.follows = "nixstable";
     };
-
   };
 
   outputs = inputs @ {
@@ -31,10 +30,16 @@
     ...
   }: let
     lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs-stable = import inputs.nixstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    tools = import inputs.dot-nixos.nixosModules.tools;
   in {
     homeModules.packages = {
       _module.args = {
-        inherit firefox-addons;
+        inherit firefox-addons pkgs-stable tools;
       };
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)
