@@ -7,9 +7,24 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Tester Modules
+    nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dot-nixos = {
+      url = "github:agdral/dot-nixos";
+      inputs.import-tree.follows = "import-tree";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixstable.follows = "nixstable";
+    };
+
   };
 
-  outputs = {
+  outputs = inputs @ {
+    self,
     nixpkgs,
     import-tree,
     firefox-addons,
@@ -27,5 +42,9 @@
     };
     homeModules.services = import-tree.filter (lib.hasSuffix "/default.nix") ./services;
     homeModules.shell = import-tree.filter (lib.hasSuffix "/default.nix") ./shell;
+
+    nixosConfigurations = import _tester/config.nix {
+      inherit self inputs lib;
+    };
   };
 }
