@@ -30,18 +30,26 @@
       inherit system;
       config.allowUnfree = true;
     };
-    joinix = import inputs.joinix.homeModules.default;
+    joinix = inputs.joinix.homeModules.default;
   in {
     homeModules.packages = {
-      _module.args = {
-        inherit firefox-addons pkgs-stable joinix;
-      };
+      _module.args = {inherit firefox-addons pkgs-stable joinix;};
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)
       ];
     };
-    homeModules.services = import-tree.filter (lib.hasSuffix "/default.nix") ./services;
-    homeModules.shell = import-tree.filter (lib.hasSuffix "/default.nix") ./shell;
+    homeModules.services = {
+      _module.args = {inherit joinix;};
+      imports = [
+        (import-tree.filter (lib.hasSuffix "/default.nix") ./services)
+      ];
+    };
+    homeModules.shell = {
+      _module.args = {inherit joinix;};
+      imports = [
+        (import-tree.filter (lib.hasSuffix "/default.nix") ./shell)
+      ];
+    };
 
     nixosConfigurations = import _tester/config.nix {
       inherit self inputs lib;
