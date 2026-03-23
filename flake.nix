@@ -34,19 +34,9 @@
   in {
     homeModules.default = {
       _module.args = {inherit firefox-addons pkgs-stable joinix;};
-    };
-    homeModules.packages = {
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)
-      ];
-    };
-    homeModules.services = {
-      imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./services)
-      ];
-    };
-    homeModules.shell = {
-      imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./shell)
       ];
     };
