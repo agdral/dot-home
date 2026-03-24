@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.kitty = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.kitty = mkEnableOption "kitty";
   config = mkIf cfg.kitty {
     programs.kitty = {
       enable = true;

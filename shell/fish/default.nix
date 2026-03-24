@@ -9,10 +9,7 @@ with lib; let
   abbrsF = lib.attrsets.mergeAttrsList (map import (joinix.importNixFiles ./abbrs []));
   cfg = config.dotShell;
 in {
-  options.dotShell.fish = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.fish = mkEnableOption "fish";
   config = lib.mkIf cfg.fish {
     programs.fish = {
       enable = true;

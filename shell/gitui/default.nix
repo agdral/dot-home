@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.gitui = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.gitui = mkEnableOption "gitui";
   config = mkIf cfg.gitui {
     programs.gitui = {
       enable = true;

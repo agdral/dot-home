@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotServ;
 in {
-  options.dotServ.wlsunset = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotServ.wlsunset = mkEnableOption "wlsunset";
   config = mkIf cfg.wlsunset {
     services.wlsunset = {
       enable = true;

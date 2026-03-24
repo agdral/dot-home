@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotPack;
 in {
-  options.dotPack.neovide = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotPack.neovide = mkEnableOption "neovide";
   config = mkIf cfg.neovide {
     programs.neovide = {
       enable = true;

@@ -7,10 +7,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.apps = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.apps = mkEnableOption "apps";
   config = mkIf cfg.apps {
     programs = {
       zoxide.enable = true;

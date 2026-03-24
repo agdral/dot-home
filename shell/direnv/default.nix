@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.direnv = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.direnv = mkEnableOption "direnv";
   config = mkIf cfg.direnv {
     programs = {
       direnv = {

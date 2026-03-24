@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.zsh = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.zsh = mkEnableOption "zsh";
   config = mkIf cfg.zsh {
     programs.zsh = {
       enable = true;

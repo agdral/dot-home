@@ -9,10 +9,7 @@ with lib; let
   tidalDlNg = pkgs.python3Packages.callPackage ./tidal-ng.nix {};
   settingsPath = "${config.home.homeDirectory}/.config/tidal_dl_ng-dev/settings.json";
 in {
-  options.dotPack.tidal = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotPack.tidal = mkEnableOption "tidal";
   config = mkIf cfg.tidal {
     home.packages = [
       pkgs.tidal-hifi

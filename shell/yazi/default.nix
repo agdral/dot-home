@@ -12,10 +12,7 @@ with lib; let
   pluginsF = import ./plugins.nix {inherit pkgs;};
   cfg = config.dotShell;
 in {
-  options.dotShell.yazi= mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.yazi = mkEnableOption "yazi";
   config = lib.mkIf cfg.yazi {
     home.packages = with pkgs; [
       unzip

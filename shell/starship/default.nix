@@ -6,10 +6,7 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.starship = mkOption {
-    type = types.bool;
-    default = false;
-  };
+  options.dotShell.starship = mkEnableOption "starship";
   config = mkIf cfg.starship {
     programs.starship = {
       enable = true;
