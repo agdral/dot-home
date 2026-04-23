@@ -9,7 +9,6 @@
   };
   dotServ = {
     openTablet = true;
-    wlsunset = true;
   };
   dotShell = {
     apps = true;
@@ -22,6 +21,6 @@
     payRespect = true;
     starship = true;
     yazi = true;
-    zsh = true;
+    zoxide = true;
   };
 }

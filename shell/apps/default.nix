@@ -10,6 +10,8 @@ in {
   options.dotShell.apps = mkEnableOption "apps";
   config = mkIf cfg.apps {
     programs = {
+      bash.enable = true;
+      zsh.enable = true;
       nix-index.enable = true;
       fd.enable = true;
       fzf.enable = true;
