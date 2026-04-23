@@ -21,10 +21,5 @@ in {
       ssh.enable = true;
       jujutsu.enable = true;
     };
-
-    home.packages = with pkgs; [
-      openssl
-      inetutils
-    ];
   };
 }
