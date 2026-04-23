@@ -10,6 +10,8 @@ in {
   config = mkIf cfg.starship {
     programs.starship = {
       enable = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
       settings = {
         username = {
           style_user = "white bold";

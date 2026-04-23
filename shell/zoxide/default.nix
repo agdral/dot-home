@@ -6,12 +6,11 @@
 with lib; let
   cfg = config.dotShell;
 in {
-  options.dotShell.direnv = mkEnableOption "direnv";
-  config = mkIf cfg.direnv {
+  options.dotShell.zoxide = mkEnableOption "zoxide";
+  config = mkIf cfg.zoxide {
     programs = {
-      direnv = {
+      zoxide = {
         enable = true;
-        nix-direnv.enable = true;
         enableFishIntegration = true;
         enableZshIntegration = true;
       };

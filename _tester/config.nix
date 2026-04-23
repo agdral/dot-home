@@ -14,7 +14,10 @@ in {
       {
         nixpkgs.config.allowUnfree = true;
         boot.loader.grub.enable = false;
-        fileSystems."/" = {device = "/dev/null";};
+        fileSystems."/" = {
+          device = "/dev/null";
+          fsType = "ext4";
+        };
         system.stateVersion = "26.05";
 
         users.users.tester = {

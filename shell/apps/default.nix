@@ -10,7 +10,6 @@ in {
   options.dotShell.apps = mkEnableOption "apps";
   config = mkIf cfg.apps {
     programs = {
-      zoxide.enable = true;
       nix-index.enable = true;
       fd.enable = true;
       fzf.enable = true;
@@ -22,14 +21,8 @@ in {
     };
 
     home.packages = with pkgs; [
-      tree
-      asciinema
       openssl
-      infisical
-      sshfs
       inetutils
-      mosh
-      pipx
     ];
   };
 }

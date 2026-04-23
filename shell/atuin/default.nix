@@ -11,7 +11,8 @@ in {
     programs = {
       atuin = {
         enable = true;
-        enableFishIntegration = false;
+        enableFishIntegration = true;
+        enableZshIntegration = true;
         settings = {
           update_check = false;
           enter_accept = true;
@@ -21,12 +22,11 @@ in {
           inline_height = 20;
         };
       };
-      fish = {
-        interactiveShellInit = ''
-          atuin init fish | sed "s/-k up/up/g" | source
-          bind up _atuin_bind_up
-        '';
-      };
+      # fish = {
+      #   interactiveShellInit = ''
+      #     atuin init fish | sed "s/-k up/up/g" | source
+      #   '';
+      # };
     };
   };
 }
