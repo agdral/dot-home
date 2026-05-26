@@ -1,7 +1,7 @@
 {
   description = "Home Dotfiles";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
     import-tree.url = "github:vic/import-tree";
     joinix.url = "github:agdral/joinix";
     firefox-addons = {

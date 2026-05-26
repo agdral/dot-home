@@ -8,23 +8,6 @@
     sort_dir_first = true;
   };
 
-  opener = {
-    edit = [
-      {
-        run = ''neovide --wayland_app_id=neovide "$@" -- -c "cd $@"'';
-        desc = "Neovide";
-        block = true;
-        for = "unix";
-      }
-      {
-        run = ''nohup code "$@" &'';
-        desc = "Code";
-        block = true;
-        for = "unix";
-      }
-    ];
-  };
-
   plugin = {
     prepend_preloaders = [
       {
