@@ -8,15 +8,15 @@ with lib; let
   cfg = config.dotPack;
   proton-pass-new = pkgs.proton-pass.overrideAttrs (oldAttrs: {
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.36.1_amd64.deb";
-      sha256 = "1q2r7yk1hdjv9hpwj6f956ai9yi6q6n0m59iy4p1amq3c18vban3";
+      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.37.0_amd64.deb";
+      sha256 = "0v87f42phlpzgz71drp4j5pixnxb60w6284y8w1kvsxb08a6zcih";
     };
   });
 
   proton-mail-new = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/mail/linux/1.13.0/ProtonMail-desktop-beta.deb";
-      sha256 = "0xggin2ggvfjm8y7138chv7kzwrkajmq0ibg6qpa964mx68w66vs";
+      url = "https://proton.me/download/mail/linux/1.13.1/ProtonMail-desktop-beta.deb";
+      sha256 = "0jm3k6jy4gws3q1cykzzwa9ayxwhj56msfsmyz7dgy9ymchj1qwq";
     };
   });
 in {
