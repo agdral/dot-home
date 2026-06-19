@@ -22,6 +22,7 @@
     nixpkgs,
     import-tree,
     firefox-addons,
+    joinix,
     ...
   }: let
     lib = nixpkgs.lib;
@@ -30,7 +31,6 @@
       inherit system;
       config.allowUnfree = true;
     };
-    joinix = inputs.joinix.homeModules.default;
   in {
     homeModules.default = {
       _module.args = {inherit firefox-addons pkgs-stable joinix;};

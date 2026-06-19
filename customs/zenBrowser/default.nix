@@ -11,7 +11,7 @@ with lib; let
 in {
   options.dotHome.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
-    environment.systemPackages = [
+    home.packages = [
       zenBrowser_pack
     ];
   };
