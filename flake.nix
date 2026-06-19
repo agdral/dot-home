@@ -38,6 +38,7 @@
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)
         (import-tree.filter (lib.hasSuffix "/default.nix") ./services)
         (import-tree.filter (lib.hasSuffix "/default.nix") ./shell)
+        (import-tree.filter (lib.hasSuffix "/default.nix") ./customs)
       ];
     };
 
