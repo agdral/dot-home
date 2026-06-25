@@ -4,7 +4,7 @@
   ...
 }:
 with lib; let
-  cfg = config.dotPack;
+  cfg = config.dotShell;
   name = "opencode";
 in {
   options.dotShell.${name} = mkEnableOption "${name}";
