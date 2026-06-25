@@ -7,7 +7,7 @@ with lib; let
   cfg = config.dotPack;
   name = "opencode";
 in {
-  options.dotPack.${name} = mkEnableOption "${name}";
+  options.dotShell.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     programs.opencode = {
       enable = true;
