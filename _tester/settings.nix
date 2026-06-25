@@ -1,10 +1,19 @@
 {...}: {
+  dotHome = {
+    asyar = true;
+    pandoc = true;
+    responsively = true;
+    zenBrowser = true;
+  };
   dotPack = {
     apps = true;
+    dconf = true;
     firefox = true;
+    gtk = true;
     neovide = true;
     proton = true;
     qmk = true;
+    qt = true;
     tidal = true;
   };
   dotServ = {
@@ -18,8 +27,10 @@
     fish = true;
     gitui = true;
     kitty = true;
-    payRespect = true;
+    opencode = true;
+    payRespects = true;
     starship = true;
+    tldr = true;
     yazi = true;
     zoxide = true;
   };
