@@ -16,12 +16,13 @@ with lib; let
   proton-mail-new = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
     src = pkgs.fetchurl {
       url = "https://proton.me/download/mail/linux/1.13.1/ProtonMail-desktop-beta.deb";
-      sha256 = "0jm3k6jy4gws3q1cykzzwa9ayxwhj56msfsmyz7dgy9ymchj1qwq";
+      sha256 = "122cqyfypkrk4lnszhr0qbn9v4npr7v6nc4yj3ijbdad13syavb4";
     };
   });
+  name = "proton";
 in {
-  options.dotPack.proton = mkEnableOption "proton";
-  config = mkIf cfg.proton {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.packages = [
       proton-pass-new
       proton-mail-new

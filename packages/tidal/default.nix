@@ -8,9 +8,10 @@ with lib; let
   cfg = config.dotPack;
   tidalDlNg = pkgs.python3Packages.callPackage ./tidal-ng.nix {};
   settingsPath = "${config.home.homeDirectory}/.config/tidal_dl_ng-dev/settings.json";
+  name = "tidal";
 in {
-  options.dotPack.tidal = mkEnableOption "tidal";
-  config = mkIf cfg.tidal {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.packages = [
       pkgs.tidal-hifi
       tidalDlNg

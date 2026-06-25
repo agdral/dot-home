@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "atuin";
 in {
-  options.dotShell.atuin = mkEnableOption "atuin";
-  config = mkIf cfg.atuin {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs = {
       atuin = {
         enable = true;

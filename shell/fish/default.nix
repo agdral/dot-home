@@ -8,9 +8,10 @@ with lib; let
   functionsF = lib.attrsets.mergeAttrsList (map import (joinix.importNixFiles ./functions []));
   abbrsF = lib.attrsets.mergeAttrsList (map import (joinix.importNixFiles ./abbrs []));
   cfg = config.dotShell;
+  name = "fish";
 in {
-  options.dotShell.fish = mkEnableOption "fish";
-  config = lib.mkIf cfg.fish {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs.fish = {
       enable = true;
       interactiveShellInit = ''

@@ -12,9 +12,10 @@ with lib; let
     ./dot/tridactyl.css
   ];
   styles = builtins.concatStringsSep "\n" contenidos;
+  name = "firefox";
 in {
-  options.dotPack.firefox = mkEnableOption "firefox";
-  config = mkIf cfg.firefox {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.file = {
       ".config/tridactyl/tridactylrc".source = ./dot/tridactylrc;
     };

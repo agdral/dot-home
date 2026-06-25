@@ -6,9 +6,10 @@
 }:
 with lib; let
   cfg = config.dotPack;
+  name = "qmk";
 in {
-  options.dotPack.qmk = mkEnableOption "qmk";
-  config = mkIf cfg.qmk {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.file = {
       ".config/qmk/qmk.ini".text = ''
         [user]

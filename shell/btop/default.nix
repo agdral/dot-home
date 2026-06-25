@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "btop";
 in {
-  options.dotShell.btop = mkEnableOption "btop";
-  config = mkIf cfg.btop {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs.btop = {
       enable = true;
       settings = {

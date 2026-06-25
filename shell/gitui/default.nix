@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "gitui";
 in {
-  options.dotShell.gitui = mkEnableOption "gitui";
-  config = mkIf cfg.gitui {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs.gitui = {
       enable = true;
       theme = ''

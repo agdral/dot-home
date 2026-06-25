@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotPack;
+  name = "dconf";
 in {
-  options.dotPack.dconf = mkEnableOption "dconf";
-  config = mkIf cfg.dconf {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     dconf.settings = {
       "org/gnome/desktop/interface" = {
         gtk-theme = "Adwaita";

@@ -6,9 +6,10 @@
 }:
 with lib; let
   cfg = config.dotServ;
+  name = "openTablet";
 in {
-  options.dotServ.openTablet = mkEnableOption "openTablet";
-  config = mkIf cfg.openTablet {
+  options.dotServ.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.packages = [pkgs-stable.opentabletdriver];
     systemd.user.services = {
       openTabletDriver = {

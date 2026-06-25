@@ -11,9 +11,10 @@ with lib; let
   keymapsF = joinix.importNixList ./keymaps;
   pluginsF = import ./plugins.nix {inherit pkgs;};
   cfg = config.dotShell;
+  name = "yazi";
 in {
-  options.dotShell.yazi = mkEnableOption "yazi";
-  config = lib.mkIf cfg.yazi {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.packages = with pkgs; [
       unzip
       poppler

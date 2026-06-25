@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "kitty";
 in {
-  options.dotShell.kitty = mkEnableOption "kitty";
-  config = mkIf cfg.kitty {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs.kitty = {
       enable = true;
       settings = {

@@ -6,9 +6,10 @@
 }:
 with lib; let
   cfg = config.dotPack;
+  name = "gtk";
 in {
-  options.dotPack.gtk = mkEnableOption "gtk";
-  config = mkIf cfg.gtk {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     gtk = {
       enable = true;
       iconTheme = {

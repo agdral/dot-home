@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "starship";
 in {
-  options.dotShell.starship = mkEnableOption "starship";
-  config = mkIf cfg.starship {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs.starship = {
       enable = true;
       enableFishIntegration = true;

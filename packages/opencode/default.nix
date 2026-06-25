@@ -1,22 +1,20 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 with lib; let
   cfg = config.dotPack;
-  name = "qt";
+  name = "opencode";
 in {
   options.dotPack.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
-    qt = {
+    programs.opencode = {
       enable = true;
-      platformTheme.name = "adwaita";
-      style = {
-        name = "adwaita-dark";
-        package = pkgs.adwaita-qt;
+      themes = {
+        catBlue = ./theme.json;
       };
+      tui.theme = "catBlue";
     };
   };
 }

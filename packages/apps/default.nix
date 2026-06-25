@@ -6,9 +6,10 @@
 }:
 with lib; let
   cfg = config.dotPack;
+  name = "apps";
 in {
-  options.dotPack.apps = mkEnableOption "apps";
-  config = mkIf cfg.apps {
+  options.dotPack.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     home.packages = with pkgs; [
       fdupes
       playerctl

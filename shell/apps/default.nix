@@ -6,9 +6,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "apps";
 in {
-  options.dotShell.apps = mkEnableOption "apps";
-  config = mkIf cfg.apps {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs = {
       bash.enable = true;
       zsh.enable = true;

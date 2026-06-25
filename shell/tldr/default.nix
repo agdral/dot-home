@@ -1,18 +1,16 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 with lib; let
   cfg = config.dotShell;
-  name = "payRespects";
+  name = "tldr";
 in {
   options.dotShell.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
-    programs.pay-respects = {
-      enable = true;
-      enableFishIntegration = true;
-      enableZshIntegration = true;
-    };
+    services.tldr-update.enable = true;
+    home.packages = [pkgs.tldr];
   };
 }

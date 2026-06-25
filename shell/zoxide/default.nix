@@ -5,9 +5,10 @@
 }:
 with lib; let
   cfg = config.dotShell;
+  name = "zoxide";
 in {
-  options.dotShell.zoxide = mkEnableOption "zoxide";
-  config = mkIf cfg.zoxide {
+  options.dotShell.${name} = mkEnableOption "${name}";
+  config = mkIf cfg.${name} {
     programs = {
       zoxide = {
         enable = true;
