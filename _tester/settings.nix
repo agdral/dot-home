@@ -1,7 +1,10 @@
 {...}: {
   dotHome = {
     asyar = true;
-    pandoc = true;
+    cardo = true;
+    padloc = true;
+    plane = true;
+    poddr = true;
     responsively = true;
     zenBrowser = true;
   };

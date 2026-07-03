@@ -7,7 +7,7 @@
 with lib; let
   cfg = config.dotHome;
   custom_pack = pkgs.callPackage ./package.nix {};
-  name = "padloc";
+  name = "poddr";
 in {
   options.dotHome.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
@@ -16,4 +16,3 @@ in {
     ];
   };
 }
-

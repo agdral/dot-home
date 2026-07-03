@@ -6,13 +6,13 @@
 }:
 with lib; let
   cfg = config.dotHome;
-  asyar_pack = pkgs.callPackage ./_asyar.nix {};
+  custom_pack = pkgs.callPackage ./package.nix {};
   name = "asyar";
 in {
   options.dotHome.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     home.packages = [
-      asyar_pack
+      custom_pack
     ];
   };
 }

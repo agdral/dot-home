@@ -19,7 +19,10 @@ in {
       ripgrep.enable = true;
       gh.enable = true;
       git.enable = true;
-      ssh.enable = true;
+      ssh = {
+        enable = true;
+        enableDefaultConfig = false;
+      };
       jujutsu.enable = true;
     };
   };

@@ -22,6 +22,7 @@ in {
           style = "full";
           inline_height = 20;
         };
+        flags = ["--disable-ctrl-r"];
       };
       # fish = {
       #   interactiveShellInit = ''

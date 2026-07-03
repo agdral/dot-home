@@ -6,13 +6,13 @@
 }:
 with lib; let
   cfg = config.dotHome;
-  zenBrowser_pack = pkgs.callPackage ./_zenBrowser.nix {};
+  custom_pack = pkgs.callPackage ./package.nix {};
   name = "zenBrowser";
 in {
   options.dotHome.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     home.packages = [
-      zenBrowser_pack
+      custom_pack
     ];
   };
 }

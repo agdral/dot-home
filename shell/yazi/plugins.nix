@@ -17,13 +17,20 @@
     rev = "main";
     hash = "sha256-VhJvNRKHxVla4v2JJeSnP0MOMBFSm4k7gfqjrHOMVlo=";
   };
+
+  relativeP = pkgs.fetchFromGitHub {
+    owner = "Jormala";
+    repo = "relative-motions.yazi";
+    rev = "main";
+    hash = "sha256-lyzwbs1u4qXuIamE31QAD6e22RPJxROs7Q/tuTkz12Q=";
+  };
 in {
   epub-preview = epubP;
   exifaudio = audioP;
   torrent-preview = torrentP;
+  relative-motions = relativeP;
   full-border = pkgs.yaziPlugins.full-border;
   mount = pkgs.yaziPlugins.mount;
-  relative-motions = pkgs.yaziPlugins.relative-motions;
   restore = pkgs.yaziPlugins.restore;
   sudo = pkgs.yaziPlugins.sudo;
 }

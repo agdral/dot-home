@@ -6,13 +6,13 @@
 }:
 with lib; let
   cfg = config.dotHome;
-  responsively_pack = pkgs.callPackage ./_responsively.nix {};
+  custom_pack = pkgs.callPackage ./package.nix {};
   name = "responsively";
 in {
   options.dotHome.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     home.packages = [
-      responsively_pack
+      custom_pack
     ];
   };
 }
