@@ -43,11 +43,8 @@ in {
           extensions.packages = with firefox-addons.packages.${pkgs.system}; [
             ublock-origin
             darkreader
-            tridactyl
-            proton-pass
-            sponsorblock
-            don-t-fuck-with-paste
             bonjourr-startpage
+            proton-pass
           ];
           userChrome = styles;
           search = {
@@ -64,6 +61,23 @@ in {
             ublock-origin
             darkreader
             bonjourr-startpage
+          ];
+          userChrome = styles;
+          search = {
+            default = "bing";
+            force = true;
+          };
+        };
+
+        studio = {
+          isDefault = false;
+          id = 2;
+          settings = import ./settings.nix;
+          extensions.packages = with firefox-addons.packages.${pkgs.system}; [
+            ublock-origin
+            darkreader
+            bonjourr-startpage
+            proton-pass
           ];
           userChrome = styles;
           search = {
