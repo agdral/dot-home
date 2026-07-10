@@ -77,7 +77,6 @@ in {
             ublock-origin
             darkreader
             bonjourr-startpage
-            proton-pass
           ];
           userChrome = styles;
           search = {

@@ -13,19 +13,12 @@ with lib; let
     };
   });
 
-  proton-mail-new = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
-    src = pkgs.fetchurl {
-      url = "https://proton.me/download/mail/linux/1.13.3/ProtonMail-desktop-beta.deb";
-      sha256 = "122cqyfypkrk4lnszhr0qbn9v4npr7v6nc4yj3ijbdad13syavb4";
-    };
-  });
   name = "proton";
 in {
   options.dotPack.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     home.packages = [
       proton-pass-new
-      proton-mail-new
     ];
   };
 }
