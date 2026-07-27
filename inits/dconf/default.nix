@@ -4,10 +4,10 @@
   ...
 }:
 with lib; let
-  cfg = config.dotPack;
+  cfg = config.dotInits;
   name = "dconf";
 in {
-  options.dotPack.${name} = mkEnableOption "${name}";
+  options.dotInits.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     dconf.settings = {
       "org/gnome/desktop/interface" = {
