@@ -9,7 +9,7 @@ with lib; let
 in {
   options.dotShell.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
-    ssh = {
+    programs.ssh = {
       enable = true;
       enableDefaultConfig = false;
 
