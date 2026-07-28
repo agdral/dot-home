@@ -1,67 +1,32 @@
 {
   fetchurl,
-  fetchFromGitHub,
-  stdenv,
-  dpkg,
-  autoPatchelfHook,
-  makeWrapper,
-  lib,
-  sqlite,
+  appimageTools,
 }: let
   pname = "cardo";
   version = "1.12.0";
 
-  oldNixpkgs = fetchFromGitHub {
-    owner = "NixOS";
-    repo = "nixpkgs";
-    rev = "a3eaf5e8eca7cab680b964138fb79073704aca75";
-    sha256 = "sha256-yWNBf6VDW38tl179FEuJ0qukthVfB02kv+mRsfUsWC0=";
-  };
-
-  legacyPkgs = import oldNixpkgs {
-    system = "x86_64-linux";
-  };
+  executableName = "cardo";
 
   src = fetchurl {
-    url = "https://github.com/cardo-podcast/cardo/releases/download/${version}/cardo_${version}_amd64_linux.deb";
-    sha256 = "02pvhd72dmx84mxk9zmpn361768lwsbi1fw4a5fwyvh9j036d13a";
+    url = "https://github.com/cardo-podcast/cardo/releases/download/${version}/cardo_${version}_amd64_linux.AppImage";
+    sha256 = "01lqsbbc4k10zxfwpbrq2l8i19gcrc252lzan0ak50yv1vjnmsr9";
+  };
+
+  appimageContents = appimageTools.extractType2 {
+    inherit pname version src;
   };
 in
-  stdenv.mkDerivation rec {
+  appimageTools.wrapType2 {
     inherit pname version src;
 
-    nativeBuildInputs = [
-      dpkg
-      autoPatchelfHook
-      makeWrapper
+    extraPkgs = pkgs: [
+      pkgs.gtk3
+      pkgs.webkitgtk_4_1 
+      pkgs.sqlite
     ];
 
-    buildInputs = [
-      legacyPkgs.gtk3
-      legacyPkgs.webkitgtk_4_0
-      legacyPkgs.libsoup_2_4
-      legacyPkgs.sqlite
-    ];
-
-    unpackCmd = "dpkg-deb -x $src .";
-
-    installPhase = ''
-      runHook preInstall
-
-      mkdir -p $out/bin $out/share $out/lib
-
-      cp -r bin/* $out/bin/
-      cp -r share/* $out/share/
-      cp -r lib/* $out/lib/
-
-      runHook postInstall
+    extraInstallCommands = ''
+      install -m 444 -D ${appimageContents}/${executableName}.desktop $out/share/applications/${pname}.desktop
+      install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/256x256@2/apps/${executableName}.png $out/share/icons/hicolor/512x512/apps/${pname}.png
     '';
-
-    meta = with lib; {
-      description = "Podcast client";
-      homepage = "https://github.com/cardo-podcast/cardo";
-      license = licenses.gpl3Plus;
-      platforms = ["x86_64-linux"];
-      mainProgram = "cardo";
-    };
   }
