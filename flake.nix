@@ -36,7 +36,6 @@
       _module.args = {inherit firefox-addons pkgs-stable joinix;};
       imports = [
         (import-tree.filter (lib.hasSuffix "/default.nix") ./customs)
-        (import-tree.filter (lib.hasSuffix "/default.nix") ./inits)
         (import-tree.filter (lib.hasSuffix "/default.nix") ./packages)
         (import-tree.filter (lib.hasSuffix "/default.nix") ./services)
         (import-tree.filter (lib.hasSuffix "/default.nix") ./shell)
