@@ -1,22 +1,14 @@
 {...}: {
   dotHome = {
-    asyar = true;
     cardo = true;
-    padloc = true;
-    plane = true;
-    poddr = true;
     responsively = true;
-    zenBrowser = true;
+    qmk = true;
   };
   dotPack = {
     apps = true;
-    dconf = true;
     firefox = true;
-    gtk = true;
     neovide = true;
     proton = true;
-    qmk = true;
-    qt = true;
     tidal = true;
   };
   dotServ = {

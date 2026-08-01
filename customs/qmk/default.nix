@@ -5,10 +5,11 @@
   ...
 }:
 with lib; let
-  cfg = config.dotPack;
+  cfg = config.dotHome;
+  custom_pack = pkgs.callPackage ./package.nix {};
   name = "qmk";
 in {
-  options.dotPack.${name} = mkEnableOption "${name}";
+  options.dotHome.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     home.file = {
       ".config/qmk/qmk.ini".text = ''
@@ -17,8 +18,8 @@ in {
       '';
     };
 
-    home.packages = with pkgs; [
-      qmk
+    home.packages = [
+      custom_pack
     ];
   };
 }
