@@ -6,7 +6,6 @@
 }:
 with lib; let
   cfg = config.dotHome;
-  custom_pack = pkgs.callPackage ./package.nix {};
   name = "qmk";
 in {
   options.dotHome.${name} = mkEnableOption "${name}";
@@ -19,7 +18,7 @@ in {
     };
 
     home.packages = [
-      custom_pack
+      pkgs.qmk
     ];
   };
 }
