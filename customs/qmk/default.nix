@@ -17,8 +17,9 @@ in {
       '';
     };
 
-    home.packages = [
-      pkgs.qmk
+    home.packages = with pkgs; [
+      qmk
+      dos2unix
     ];
   };
 }
