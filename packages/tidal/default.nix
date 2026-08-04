@@ -13,7 +13,7 @@ in {
   options.dotPack.${name} = mkEnableOption "${name}";
   config = mkIf cfg.${name} {
     home.packages = [
-      pkgs.tidal-hifi
+      # pkgs.tidal-hifi
       tidalDlNg
     ];
 
