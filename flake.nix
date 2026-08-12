@@ -1,16 +1,18 @@
 {
   description = "Home Dotfiles";
+
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
+    nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
+
     import-tree.url = "github:vic/import-tree";
     joinix.url = "github:agdral/joinix";
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixstable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
 
-    # Tester Modules
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
