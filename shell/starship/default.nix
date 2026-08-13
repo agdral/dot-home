@@ -14,6 +14,17 @@ in {
       enableFishIntegration = true;
       enableZshIntegration = true;
       settings = {
+        format = lib.concatStrings [
+          "$username"
+          "$hostname"
+          "$directory"
+          "$git_branch"
+          "$git_status"
+          "$cmd_duration"
+          "$time"
+          "$line_break"
+          "$character"
+        ];
         username = {
           style_user = "white bold";
           style_root = "black bold";
@@ -23,7 +34,7 @@ in {
         };
         time = {
           disabled = false;
-          format = "🕙[$time]($style) ";
+          format = "  [$time]($style) ";
           time_format = "%T";
           utc_time_offset = "-3";
         };
