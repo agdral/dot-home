@@ -21,12 +21,12 @@ in {
           disabled = false;
           show_always = true;
         };
-      };
-      time = {
-        disabled = false;
-        format = "🕙[$time]($style) ";
-        time_format = "%T";
-        utc_time_offset = "-3";
+        time = {
+          disabled = false;
+          format = "🕙[$time]($style) ";
+          time_format = "%T";
+          utc_time_offset = "-3";
+        };
       };
     };
   };
