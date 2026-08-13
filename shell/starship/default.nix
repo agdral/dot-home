@@ -13,12 +13,7 @@ in {
       enable = true;
       enableFishIntegration = true;
       enableZshIntegration = true;
-      presets = [
-        "jetpack"
-      ];
       settings = {
-        format = "[$username]";
-        right_format = "[$all]";
         username = {
           style_user = "white bold";
           style_root = "black bold";
@@ -26,6 +21,12 @@ in {
           disabled = false;
           show_always = true;
         };
+      };
+      time = {
+        disabled = false;
+        format = "🕙[$time]($style) ";
+        time_format = "%T";
+        utc_time_offset = "-3";
       };
     };
   };
