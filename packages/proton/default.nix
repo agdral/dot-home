@@ -8,8 +8,8 @@ with lib; let
   cfg = config.dotPack;
   proton-pass-new = pkgs.proton-pass.overrideAttrs (oldAttrs: {
     src = pkgs.fetchurl {
-      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.39.1_amd64.deb";
-      sha256 = "1q2vdkd6kism2d2i3xp5yv8iz0j6zy3y5aysxpmdx45wq7l6sfyw";
+      url = "https://proton.me/download/pass/linux/x64/proton-pass_1.42.0_amd64.deb";
+      sha256 = "0r2mjldzg5scaq6z22agmyl594mym5wpjwynhk3mmknl7nw5vh37";
     };
   });
 

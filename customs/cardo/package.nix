@@ -12,7 +12,7 @@
     sha256 = "01lqsbbc4k10zxfwpbrq2l8i19gcrc252lzan0ak50yv1vjnmsr9";
   };
 
-  appimageContents = appimageTools.extractType2 {
+  appimageContents = appimageTools.extract {
     inherit pname version src;
   };
 in
