@@ -5,4 +5,6 @@
   ggl = "git pull";
   ggc = "git clone";
   ggs = "git status";
+
+  gs = "gita super";
 }

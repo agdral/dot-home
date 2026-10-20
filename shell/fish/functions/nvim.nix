@@ -7,7 +7,7 @@
   '';
 
   n = "cn .";
-  v = "cv .";
+  s = "cs .";
 
   c = "code .";
 
@@ -19,8 +19,8 @@
   zc = ''
     set result (zoxide query $argv)
     cd $result
-    v
+    s
   '';
 
-  nt = "cv $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
+  nt = "cs $(mktemp /tmp/temp/note-XXXXXX.txt) -- -c 'cd /tmp/temp'";
 }
