@@ -2,7 +2,7 @@
   cn = ''
     neovide --wayland_app_id=neovide $argv
   '';
-  cv = ''
+  cs = ''
     neovide --wayland_app_id=Code $argv
   '';
 
